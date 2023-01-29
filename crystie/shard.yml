@@ -1,0 +1,9 @@
+name: crystie
+version: 0.1.0
+
+authors:
+  - uvlad7 <uvlad7@gmail.com>
+
+crystal: 1.7.2
+
+license: MIT
