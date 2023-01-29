@@ -1,7 +1,7 @@
-<svg fill="none" viewBox="0 0 800 400" width="800" height="400"
+<svg fill="none" viewBox="0 0 800 200" width="800" height="200"
     xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
-        <div xmlns="http://www.w3.org/1999/xhtml" style="background-color: #242424; color: #FEFEFE">
+        <div width="800" height="200" xmlns="http://www.w3.org/1999/xhtml" style="background-color: #242424; color: #FEFEFE">
             <pre><font color="#4E9A06"><b>vladimir@np940x5n</b></font>:<font color="#3465A4"><b>~/ffie</b></font>$ rake build &gt; /dev/null 2&gt;&amp;1 &amp;&amp; bundle exec ./rubie.rb
 Hello from <font color="#E33A25">Rust</font>!
 Hello from <font color="#776790">Crystal</font>!

@@ -8,5 +8,5 @@ Hello from C++!
 Hello from Ruby!
 </samp><pre>
 <div align="center">
-    <img src="Readme.svg" width="800" height="400" alt="teminal output">
+    <img src="Readme.svg" alt="teminal output">
 </div>
