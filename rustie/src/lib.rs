@@ -2,7 +2,7 @@ extern crate ansi_term;
 use ansi_term::Colour;
 
 #[no_mangle]
-pub unsafe extern "C" fn hello() {
+pub unsafe extern "C" fn hello_rustie() {
     println!("Hello from {}!",
              // Colour::Yellow.paint("Rust"));
              // Colour::RGB(183, 65, 14).paint("Rust"));

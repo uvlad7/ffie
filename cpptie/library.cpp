@@ -5,7 +5,7 @@
 #define OOF_IMPL
 #include "oof.h"
 
-void hello() {
+void hello_cpptie() {
     auto color = [](const std::string &text, int r, int g, int b) {
         std::ostringstream res;
         res << oof::fg_color({ r, g, b }) << text << oof::reset_formatting();

@@ -1,6 +1,6 @@
 require "colorize"
 
-fun init : Void
+fun init_crystal : Void
   # We need to initialize the GC
   GC.init
 
@@ -11,7 +11,7 @@ fun init : Void
   LibCrystalMain.__crystal_main(0, Pointer(Pointer(UInt8)).null)
 end
 
-fun hello : Void
+fun hello_crystie : Void
   # puts "Hello from #{"Crystal".colorize(:blue)}!"
   # puts "Hello from #{"Crystal".colorize(Colorize::ColorRGB.new(0, 0, 0))}!"
   # puts "Hello from #{"Crystal".colorize(Colorize::ColorRGB.new(46, 16, 82))}!"

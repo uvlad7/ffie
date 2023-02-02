@@ -4,56 +4,76 @@ require "ffi"
 # require "rainbow"
 require "paint"
 
+# It works
+# But only if loaded before crystal and go
+# And init_julia still causes segmentation fault from time to time
+# module JulitieLib
+#   extend FFI::Library
+#   ffi_lib "julitie/libjulitie.so"
+
+#   attach_function :init_julia, [], :void
+#   init_julia
+#   undef init_julia
+
+#   attach_function :hello_julitie, [], :void
+# end
+
 module RustieLib
   extend FFI::Library
   ffi_lib "rustie/librustie.so"
 
-  attach_function :hello, [], :void
+  attach_function :hello_rustie, [], :void
 end
 
 module CrystieLib
   extend FFI::Library
   ffi_lib 'crystie/libcrystie.so'
 
-  attach_function :init, [], :void
-  init
-  undef init
+  attach_function :init_crystal, [], :void
+  init_crystal
+  undef init_crystal
 
-  attach_function :hello, [], :void
+  attach_function :hello_crystie, [], :void
 end
 
 module GotieLib
   extend FFI::Library
   ffi_lib 'gotie/libgotie.so'
 
-  attach_function :hello, [], :void
+  attach_function :hello_gotie, [], :void
 end
 
 module CittieLib
   extend FFI::Library
   ffi_lib "cittie/libcittie.so"
 
-  attach_function :hello, [], :void
+  attach_function :hello_cittie, [], :void
 end
 
 module CpptieLib
   extend FFI::Library
   ffi_lib "cpptie/libcpptie.so"
 
-  attach_function :hello, [], :void
+  attach_function :hello_cpptie, [], :void
 end
 
-RustieLib.hello
+def hello_rubie
+  # puts "Hello from #{"Ruby".colorize(:red)}!"
+  # puts "Hello from #{Rainbow("Ruby").color(176, 18, 5)}!"
+  # puts "Hello from #{Rainbow("Ruby").color(136, 17, 2)}!"
+  puts "Hello from #{Paint['Ruby', [136, 17, 2]]}!"
+end
 
-CrystieLib.hello
+RustieLib.hello_rustie
 
-GotieLib.hello
+CrystieLib.hello_crystie
 
-CittieLib.hello
+GotieLib.hello_gotie
 
-CpptieLib.hello
+CittieLib.hello_cittie
 
-# puts "Hello from #{"Ruby".colorize(:red)}!"
-# puts "Hello from #{Rainbow("Ruby").color(176, 18, 5)}!"
-# puts "Hello from #{Rainbow("Ruby").color(136, 17, 2)}!"
-puts "Hello from #{Paint['Ruby', [136, 17, 2]]}!"
+CpptieLib.hello_cpptie
+
+# JulitieLib.hello_julitie
+
+hello_rubie

@@ -1,0 +1,9 @@
+.rake_tasks~
+*.so
+cittie/build/
+cpptie/build/
+gotie/libgotie.h
+rustie/target/
+julitie/target/
+julitie/julia/
+julitie/libjulia.so.*

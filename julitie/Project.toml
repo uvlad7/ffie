@@ -1,0 +1,17 @@
+name = "julitie"
+uuid = "cd44fd37-faf9-4e72-b84c-e5fbdc21addf"
+authors = ["uvlad7"]
+version = "0.1.0"
+
+[deps]
+Crayons = "a8cc5b0e-0ffa-5ad4-8c14-923d3ee1735f"
+PackageCompiler = "9b87118b-4619-50d2-8e1e-99f35a4d4d9d"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
