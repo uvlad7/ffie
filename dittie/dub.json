@@ -1,0 +1,13 @@
+{
+	"authors": [
+		"Vladimir"
+	],
+	"copyright": "Copyright © 2023, Vladimir",
+	"dependencies": {
+		"terminal": "~>1.0.0"
+	},
+	"description": "D shared lib",
+	"license": "MIT",
+	"name": "dittie",
+	"targetType": "dynamicLibrary"
+}

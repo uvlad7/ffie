@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/dittie
+dittie.so
+dittie.dylib
+dittie.dll
+dittie.a
+dittie.lib
+dittie-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
