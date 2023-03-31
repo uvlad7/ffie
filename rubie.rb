@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
-require "ffi"
+require 'ffi'
 # require "colorize"
 # require "rainbow"
-require "paint"
+require 'paint'
 
 # It works
 # But only if loaded before crystal and go
@@ -20,7 +20,7 @@ require "paint"
 
 module RustieLib
   extend FFI::Library
-  ffi_lib "rustie/librustie.so"
+  ffi_lib 'rustie/librustie.so'
 
   attach_function :hello_rustie, [], :void
 end
@@ -45,16 +45,23 @@ end
 
 module CittieLib
   extend FFI::Library
-  ffi_lib "cittie/libcittie.so"
+  ffi_lib 'cittie/libcittie.so'
 
   attach_function :hello_cittie, [], :void
 end
 
 module CpptieLib
   extend FFI::Library
-  ffi_lib "cpptie/libcpptie.so"
+  ffi_lib 'cpptie/libcpptie.so'
 
   attach_function :hello_cpptie, [], :void
+end
+
+module ZiggieLib
+  extend FFI::Library
+  ffi_lib 'ziggie/libziggie.so'
+
+  attach_function :hello_ziggie, [], :void
 end
 
 def hello_rubie
@@ -75,5 +82,7 @@ CittieLib.hello_cittie
 CpptieLib.hello_cpptie
 
 # JulitieLib.hello_julitie
+
+ZiggieLib.hello_ziggie
 
 hello_rubie

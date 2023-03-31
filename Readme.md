@@ -5,6 +5,7 @@ Hello from Crystal!
 Hello from Go!
 Hello from C!
 Hello from C++!
+Hello from Zig!
 Hello from Ruby!
 </samp><pre>
 <div align="center">

@@ -1,5 +1,6 @@
 .rake_tasks~
 *.so
+*.so.*
 cittie/build/
 cpptie/build/
 gotie/libgotie.h
@@ -7,3 +8,6 @@ rustie/target/
 julitie/target/
 julitie/julia/
 julitie/libjulia.so.*
+ziggie/.gyro/
+ziggie/deps.zig
+ziggie/zig-cache/

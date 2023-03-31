@@ -1,4 +1,4 @@
-LIBS = %w[crystie rustie gotie cittie cpptie julitie] - %w[julitie]
+LIBS = %w[crystie rustie gotie cittie cpptie julitie ziggie] - %w[julitie]
 
 task :build do
 	sh 'bundle install'
