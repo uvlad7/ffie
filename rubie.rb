@@ -71,6 +71,13 @@ module DittieLib
   attach_function :hello_dittie, [], :void
 end
 
+module SwiftieLib
+  extend FFI::Library
+  ffi_lib 'swiftie/libswiftie.so'
+
+  attach_function :hello_swiftie, [], :void
+end
+
 def hello_rubie
   # puts "Hello from #{"Ruby".colorize(:red)}!"
   # puts "Hello from #{Rainbow("Ruby").color(176, 18, 5)}!"
@@ -93,5 +100,7 @@ CpptieLib.hello_cpptie
 ZiggieLib.hello_ziggie
 
 DittieLib.hello_dittie
+
+SwiftieLib.hello_swiftie
 
 hello_rubie

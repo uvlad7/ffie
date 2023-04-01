@@ -7,6 +7,7 @@ Hello from C!
 Hello from C++!
 Hello from Zig!
 Hello from D!
+Hello from Swift!
 Hello from Ruby!
 </samp><pre>
 <div align="center">
