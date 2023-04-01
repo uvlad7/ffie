@@ -9,7 +9,7 @@ require 'paint'
 # And init_julia still causes segmentation fault from time to time
 # module JulitieLib
 #   extend FFI::Library
-#   ffi_lib "julitie/libjulitie.so"
+#   ffi_lib File.join(__dir__, 'julitie/libjulitie.so')
 
 #   attach_function :init_julia, [], :void
 #   init_julia
@@ -20,14 +20,14 @@ require 'paint'
 
 module RustieLib
   extend FFI::Library
-  ffi_lib 'rustie/librustie.so'
+  ffi_lib File.join(__dir__, 'rustie/librustie.so')
 
   attach_function :hello_rustie, [], :void
 end
 
 module CrystieLib
   extend FFI::Library
-  ffi_lib 'crystie/libcrystie.so'
+  ffi_lib File.join(__dir__, 'crystie/libcrystie.so')
 
   attach_function :init_crystal, [], :void
   init_crystal
@@ -38,42 +38,42 @@ end
 
 module GotieLib
   extend FFI::Library
-  ffi_lib 'gotie/libgotie.so'
+  ffi_lib File.join(__dir__, 'gotie/libgotie.so')
 
   attach_function :hello_gotie, [], :void
 end
 
 module CittieLib
   extend FFI::Library
-  ffi_lib 'cittie/libcittie.so'
+  ffi_lib File.join(__dir__, 'cittie/libcittie.so')
 
   attach_function :hello_cittie, [], :void
 end
 
 module CpptieLib
   extend FFI::Library
-  ffi_lib 'cpptie/libcpptie.so'
+  ffi_lib File.join(__dir__, 'cpptie/libcpptie.so')
 
   attach_function :hello_cpptie, [], :void
 end
 
 module ZiggieLib
   extend FFI::Library
-  ffi_lib 'ziggie/libziggie.so'
+  ffi_lib File.join(__dir__, 'ziggie/libziggie.so')
 
   attach_function :hello_ziggie, [], :void
 end
 
 module DittieLib
   extend FFI::Library
-  ffi_lib 'dittie/libdittie.so'
+  ffi_lib File.join(__dir__, 'dittie/libdittie.so')
 
   attach_function :hello_dittie, [], :void
 end
 
 module SwiftieLib
   extend FFI::Library
-  ffi_lib 'swiftie/libswiftie.so'
+  ffi_lib File.join(__dir__, 'swiftie/libswiftie.so')
 
   attach_function :hello_swiftie, [], :void
 end
