@@ -78,6 +78,23 @@ module SwiftieLib
   attach_function :hello_swiftie, [], :void
 end
 
+module HaskieLib
+  extend FFI::Library
+  ffi_lib File.join(__dir__, 'haskie/libhaskie.so')
+
+  attach_function :init_haskell, [], :void
+  init_haskell
+  undef init_haskell
+
+  at_exit do
+    attach_function :exit_haskell, [], :void
+    exit_haskell
+    undef exit_haskell
+  end
+
+  attach_function :hello_haskie, [], :void
+end
+
 def hello_rubie
   # puts "Hello from #{"Ruby".colorize(:red)}!"
   # puts "Hello from #{Rainbow("Ruby").color(176, 18, 5)}!"
@@ -102,5 +119,7 @@ ZiggieLib.hello_ziggie
 DittieLib.hello_dittie
 
 SwiftieLib.hello_swiftie
+
+HaskieLib.hello_haskie
 
 hello_rubie
