@@ -1,3 +1,5 @@
+This project is created to demonstrate how to create shared libraries in different languages and use them from Ruby
+
 <pre><samp>
 vladimir@np940x5n:~/ffie$ rake build > /dev/null 2>&1 && bundle exec ./rubie.rb
 Hello from Rust!
