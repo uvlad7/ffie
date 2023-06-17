@@ -12,6 +12,7 @@ Hello from D!
 Hello from Swift!
 Hello from Haskell!
 Hello from LLVM!
+Hello from RubyLLVM!
 Hello from Ruby!
 </samp><pre>
 <div align="center">

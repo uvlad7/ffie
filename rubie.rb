@@ -95,18 +95,24 @@ module HaskieLib
   attach_function :hello_haskie, [], :void
 end
 
-module LLtieLib
+module LltieLib
   extend FFI::Library
   ffi_lib File.join(__dir__, 'lltie/liblltie.so')
 
   attach_function :hello_lltie, [], :void
 end
 
-def hello_rubie
-  # puts "Hello from #{"Ruby".colorize(:red)}!"
-  # puts "Hello from #{Rainbow("Ruby").color(176, 18, 5)}!"
-  # puts "Hello from #{Rainbow("Ruby").color(136, 17, 2)}!"
-  puts "Hello from #{Paint['Ruby', [136, 17, 2]]}!"
+module Rubie
+  def self.hello_rubie
+    # puts "Hello from #{"Ruby".colorize(:red)}!"
+    # puts "Hello from #{Rainbow("Ruby").color(176, 18, 5)}!"
+    # puts "Hello from #{Rainbow("Ruby").color(136, 17, 2)}!"
+    puts "Hello from #{Paint['Ruby', [136, 17, 2]]}!"
+  end
+end
+
+module LlRubie
+  extend(catch(:wrapper) { load(File.join(__dir__, 'llrubie/llrubie.rb'), true) })
 end
 
 RustieLib.hello_rustie
@@ -129,6 +135,8 @@ SwiftieLib.hello_swiftie
 
 HaskieLib.hello_haskie
 
-LLtieLib.hello_lltie
+LltieLib.hello_lltie
 
-hello_rubie
+LlRubie.hello_llrubie
+
+Rubie.hello_rubie

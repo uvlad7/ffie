@@ -3,6 +3,10 @@ GEM
   specs:
     ffi (1.15.5)
     paint (2.3.0)
+    rake (13.0.6)
+    ruby-llvm (15.0.3)
+      ffi (~> 1.13)
+      rake (>= 12, < 14)
 
 PLATFORMS
   x86_64-linux
@@ -10,6 +14,7 @@ PLATFORMS
 DEPENDENCIES
   ffi
   paint
+  ruby-llvm
 
 BUNDLED WITH
    2.4.2
