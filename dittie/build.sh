@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-dub build
+dub build --compiler=ldc2

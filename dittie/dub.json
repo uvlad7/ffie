@@ -9,5 +9,6 @@
 	"description": "D shared lib",
 	"license": "MIT",
 	"name": "dittie",
-	"targetType": "dynamicLibrary"
+	"targetType": "dynamicLibrary",
+	"dflags-ldc2": ["-link-defaultlib-shared"]
 }
