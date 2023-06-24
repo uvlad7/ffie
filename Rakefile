@@ -1,10 +1,13 @@
 LIBS = %w[crystie rustie gotie cittie cpptie julitie ziggie dittie swiftie haskie lltie] - %w[julitie]
 
 task :build do
-	sh 'bundle install'
-	LIBS.each do |lib|
-		cd "./#{lib}" do
-			sh './build.sh'
-		end
-	end
+  sh 'bundle install'
+  LIBS.each do |lib|
+    cd "./#{lib}" do
+      sh './build.sh'
+    end
+  end
+  sh 'pipenv install'
 end
+
+task :default => [:build]

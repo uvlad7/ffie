@@ -1,8 +1,8 @@
-<svg fill="none" viewBox="0 0 800 200" width="800" height="200"
+<svg fill="none" viewBox="0 0 800 800" width="800" height="800"
     xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
-        <div width="800" height="200" xmlns="http://www.w3.org/1999/xhtml" style="background-color: #242424; color: #FEFEFE">
-            <pre><font color="#4E9A06"><b>vladimir@np940x5n</b></font>:<font color="#3465A4"><b>~/ffie</b></font>$ rake build &gt; /dev/null 2&gt;&amp;1 &amp;&amp; bundle exec ./rubie.rb
+        <div width="800" height="800" xmlns="http://www.w3.org/1999/xhtml" style="background-color: #242424; color: #FEFEFE">
+            <pre><font color="#4E9A06"><b>vladimir@np940x5n</b></font>:<font color="#3465A4"><b>~/ffie</b></font>$ rake &gt; /dev/null 2&gt;&amp;1 &amp;&amp; bundle exec ./rubie.rb &amp;&amp; pipenv run ./pythonie.py
 Hello from <font color="#E33A25">Rust</font>!
 Hello from <font color="#776790">Crystal</font>!
 Hello from <font color="#11ABB6">Go</font>!
@@ -14,7 +14,19 @@ Hello from <font color="#F87432">Swift</font>!
 Hello from <font color="#8E4E8A">Haskell</font>!
 Hello from <font color="#2B617A">LLVM</font>!
 Hello from <font color="#881102">Ruby</font><font color="#2B617A">LLVM</font>!
-Hello from <font color="#881102">Ruby</font>!</pre>
+Hello from <font color="#881102">Ruby</font>!
+Hello from <font color="#E33A25">Rust</font>!
+Hello from <font color="#776790">Crystal</font>!
+Hello from <font color="#11ABB6">Go</font>!
+Hello from <font color="#00589B">C</font>!
+Hello from <font color="#6499D1">C++</font>!
+Hello from <font color="#F6A31D">Zig</font>!
+Hello from <font color="#B03932">D</font>!
+Hello from <font color="#F87432">Swift</font>!
+Hello from <font color="#8E4E8A">Haskell</font>!
+Hello from <font color="#2B617A">LLVM</font>!
+Hello from <font color="#F6CB00">Python</font>!
+            </pre>
         </div>
     </foreignObject>
 </svg>
