@@ -11,3 +11,4 @@ julitie/libjulia.so.*
 ziggie/.gyro/
 ziggie/deps.zig
 ziggie/zig-cache/
+__pycache__/

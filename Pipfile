@@ -8,6 +8,7 @@ cffi = "*"
 colorist = "*"
 
 [dev-packages]
+invoke = "*"
 
 [requires]
 python_version = "3.10"

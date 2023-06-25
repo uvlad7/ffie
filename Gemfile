@@ -6,3 +6,7 @@ gem 'ffi'
 # gem "rainbow"
 gem 'paint'
 gem 'ruby-llvm', require: false
+
+group :development do
+  gem 'rake', require: false
+end
