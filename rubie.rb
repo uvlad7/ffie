@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require 'ffi'
+require 'pycall/import'
 # require "colorize"
 # require "rainbow"
 require 'paint'
@@ -115,28 +116,45 @@ module LlRubie
   extend(catch(:wrapper) { load(File.join(__dir__, 'llrubie/llrubie.rb'), true) })
 end
 
-RustieLib.hello_rustie
+module Pythonie
+  extend PyCall::Import
+  pyimport :sys
+  sys.path.insert(0, '')
+  pyfrom :pythonie, import: :Pythonie
 
-CrystieLib.hello_crystie
+  def self.hello_pythonie
+    Pythonie.hello_pythonie
+  end
+end
 
-GotieLib.hello_gotie
+# pipenv run bundle exec rubie.rb
 
-CittieLib.hello_cittie
+if $PROGRAM_NAME == __FILE__
+  RustieLib.hello_rustie
 
-CpptieLib.hello_cpptie
+  CrystieLib.hello_crystie
 
-# JulitieLib.hello_julitie
+  GotieLib.hello_gotie
 
-ZiggieLib.hello_ziggie
+  CittieLib.hello_cittie
 
-DittieLib.hello_dittie
+  CpptieLib.hello_cpptie
 
-SwiftieLib.hello_swiftie
+  # JulitieLib.hello_julitie
 
-HaskieLib.hello_haskie
+  ZiggieLib.hello_ziggie
 
-LltieLib.hello_lltie
+  DittieLib.hello_dittie
 
-LlRubie.hello_llrubie
+  SwiftieLib.hello_swiftie
 
-Rubie.hello_rubie
+  HaskieLib.hello_haskie
+
+  LltieLib.hello_lltie
+
+  LlRubie.hello_llrubie
+
+  Rubie.hello_rubie
+
+  Pythonie.hello_pythonie
+end

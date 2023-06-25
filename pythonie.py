@@ -94,30 +94,32 @@ lltie_loader.cdef("""
      void hello_lltie();
 """)
 
-class PythonieLib:
+class Pythonie:
     def hello_pythonie():
         # pycolor = ColorRGB(57, 118, 170)
         pycolor = ColorRGB(246, 203, 0)
         print(f"Hello from {pycolor}Python{pycolor.OFF}!")
 
-RustieLib.hello_rustie()
 
-CrystieLib.hello_crystie()
+if __name__ == "__main__":
+    RustieLib.hello_rustie()
+    
+    CrystieLib.hello_crystie()
+    
+    GotieLib.hello_gotie()
 
-GotieLib.hello_gotie()
+    CittieLib.hello_cittie()
 
-CittieLib.hello_cittie()
+    CpptieLib.hello_cpptie()
 
-CpptieLib.hello_cpptie()
+    ZiggieLib.hello_ziggie()
 
-ZiggieLib.hello_ziggie()
+    DittieLib.hello_dittie()
 
-DittieLib.hello_dittie()
+    SwiftieLib.hello_swiftie()
 
-SwiftieLib.hello_swiftie()
+    HaskieLib.hello_haskie()
 
-HaskieLib.hello_haskie()
+    LltieLib.hello_lltie()
 
-LltieLib.hello_lltie()
-
-PythonieLib.hello_pythonie()
+    Pythonie.hello_pythonie()
