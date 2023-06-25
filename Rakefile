@@ -1,4 +1,6 @@
-LIBS = %w[crystie rustie gotie cittie cpptie julitie ziggie dittie swiftie haskie lltie] - %w[julitie]
+require 'set'
+
+LIBS = %w[crystie rustie gotie cittie cpptie julitie ziggie dittie swiftie haskie lltie].to_set - %w[julitie].to_set
 
 task :build do
   sh 'bundle install'
