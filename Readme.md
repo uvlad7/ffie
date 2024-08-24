@@ -7,6 +7,7 @@ Hello from Crystal!
 Hello from Go!
 Hello from C!
 Hello from C++!
+Hello from Julia!
 Hello from Zig!
 Hello from D!
 Hello from Swift!
@@ -14,11 +15,13 @@ Hello from Haskell!
 Hello from LLVM!
 Hello from RubyLLVM!
 Hello from Ruby!
+Hello from Python!
 Hello from Rust!
 Hello from Crystal!
 Hello from Go!
 Hello from C!
 Hello from C++!
+Hello from Julia!
 Hello from Zig!
 Hello from D!
 Hello from Swift!
