@@ -4,11 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-cffi = "*"
-colorist = "*"
+cffi = "1.15.1"
+colorist = "1.6.0"
 
 [dev-packages]
-invoke = "*"
+invoke = "2.1.3"
 
 [requires]
 python_version = "3.10"
