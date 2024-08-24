@@ -8,6 +8,6 @@ gem 'paint'
 gem 'pycall'
 gem 'ruby-llvm', require: false
 
-group :development do
+group :dev do
   gem 'rake', require: false
 end

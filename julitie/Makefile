@@ -11,6 +11,9 @@ target: $(srcfiles)
 
 .DEFAULT_GOAL := target
 
+clean: uninstall
+	rm -rf target
+
 install: $(sofiles) $(sodirs)
 
 $(sodirs): target
@@ -19,4 +22,4 @@ $(sodirs): target
 $(sofiles): target
 	cp target/lib/$@ .
 
-.PHONY: uninstall install
+.PHONY: uninstall install clean

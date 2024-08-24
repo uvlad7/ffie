@@ -1,7 +1,7 @@
-This project is created to demonstrate how to create shared libraries in different languages and use them from Ruby
+This project is created to demonstrate how to create shared libraries in different languages and use them from Ruby and Python
 
 <pre><samp>
-vladimir@np940x5n:~/ffie$ rake > /dev/null 2>&1 && pipenv run bundle exec ./rubie.rb && pipenv run ./pythonie.py
+vladimir@np940x5n:~/ffie$ bundle exec rake > /dev/null 2>&1 && pipenv run bundle exec ./rubie.rb && pipenv run ./pythonie.py
 Hello from Rust!
 Hello from Crystal!
 Hello from Go!
@@ -33,8 +33,11 @@ Hello from Python!
     <img src="Readme.svg" alt="teminal output">
 </div>
 
+You can use `poetry` instead of `pipenv`.
 
-# Tools
+You can use `pipenv run inv` or `poetry run inv` or `poetry run poe build` instead of `bundle exec rake`. All these commands use [`tasks.py`](/tasks.py) for [Invoke](https://www.pyinvoke.org/) - and [Poe the Poet](https://poethepoet.natn.io/index.html), configured in the `[tool.poe.tasks]` section of the [`pyproject.toml`](/pyproject.toml) for the last one - instead of Rake and [`Rakefile`](/Rakefile).
+
+# Installation
 
 ## C, C++
 
@@ -76,7 +79,7 @@ brew install llvm@15
 
 ```bash
 $ mise use ruby@2.7.8
-$ gem install bundler -v 2.4.2
+$ gem install bundler -v 2.4.2 && bundle install
 ```
 
 ## Go
@@ -101,7 +104,10 @@ $ mise use julia@1.10.4 # was 1.8.5
 
 ```bash
 $ mise use python@3.10.12
-$ pip install pipenv==2023.10.3
+# use pipenv or poetry
+$ mise use pipenv@2023.10.3 && pipenv install --dev
+# or
+$ mise use poetry@1.5.1 && poetry install
 ```
 
 ## Rust
