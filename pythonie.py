@@ -1,8 +1,20 @@
 #!/usr/bin/env python
 from cffi import FFI
 import os
-import atexit
 from colorist import ColorRGB
+
+julitie_loader = FFI()
+JulitieLib = julitie_loader.dlopen(os.path.join(os.getcwd(), 'julitie/libjulitie.so'))
+
+julitie_loader.cdef("""
+     void init_julia();
+""")
+JulitieLib.init_julia()
+del JulitieLib.init_julia
+
+julitie_loader.cdef("""
+     void hello_julitie();
+""")
 
 rustie_loader = FFI()
 RustieLib = rustie_loader.dlopen(os.path.join(os.getcwd(), 'rustie/librustie.so'))
@@ -13,12 +25,6 @@ rustie_loader.cdef("""
 
 crystie_loader = FFI()
 CrystieLib = crystie_loader.dlopen(os.path.join(os.getcwd(), 'crystie/libcrystie.so'))
-
-crystie_loader.cdef("""
-     void init_crystal();
-""")
-CrystieLib.init_crystal()
-del CrystieLib.init_crystal
 
 crystie_loader.cdef("""
      void hello_crystie();
@@ -70,22 +76,8 @@ haskie_loader = FFI()
 HaskieLib = haskie_loader.dlopen(os.path.join(os.getcwd(), 'haskie/libhaskie.so'))
 
 haskie_loader.cdef("""
-     void init_haskell();
-""")
-HaskieLib.init_haskell()
-del HaskieLib.init_haskell
-
-haskie_loader.cdef("""
      void hello_haskie();
 """)
-
-def haskie_atexit():
-    haskie_loader.cdef("""
-         void exit_haskell();
-    """)
-    HaskieLib.exit_haskell()
-    del HaskieLib.exit_haskell
-atexit.register(haskie_atexit)
 
 lltie_loader = FFI()
 LltieLib = lltie_loader.dlopen(os.path.join(os.getcwd(), 'lltie/liblltie.so'))
@@ -111,6 +103,8 @@ if __name__ == "__main__":
     CittieLib.hello_cittie()
 
     CpptieLib.hello_cpptie()
+
+    JulitieLib.hello_julitie()
 
     ZiggieLib.hello_ziggie()
 

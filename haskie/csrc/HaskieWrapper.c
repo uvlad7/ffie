@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "HsFFI.h"
 
-void init_haskell(void){
+__attribute__((constructor)) void init_haskell(void){
   int argc = 2;
   char *argv[] = { "+RTS", "-A32m", NULL };
   char **pargv = argv;
@@ -14,6 +14,6 @@ void init_haskell(void){
 //   return HS_BOOL_TRUE;
 }
 
-void exit_haskell(void){
+__attribute__((destructor)) void exit_haskell(void){
   hs_exit();
 }

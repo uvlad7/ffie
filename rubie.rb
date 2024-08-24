@@ -5,19 +5,16 @@ require 'pycall/import'
 # require "rainbow"
 require 'paint'
 
-# It works
-# But only if loaded before crystal and go
-# And init_julia still causes segmentation fault from time to time
-# module JulitieLib
-#   extend FFI::Library
-#   ffi_lib File.join(__dir__, 'julitie/libjulitie.so')
+module JulitieLib
+  extend FFI::Library
+  ffi_lib File.join(__dir__, 'julitie/libjulitie.so')
 
-#   attach_function :init_julia, [], :void
-#   init_julia
-#   undef init_julia
+  attach_function :init_julia, [], :void
+  init_julia
+  undef init_julia
 
-#   attach_function :hello_julitie, [], :void
-# end
+  attach_function :hello_julitie, [], :void
+end
 
 module RustieLib
   extend FFI::Library
@@ -29,10 +26,6 @@ end
 module CrystieLib
   extend FFI::Library
   ffi_lib File.join(__dir__, 'crystie/libcrystie.so')
-
-  attach_function :init_crystal, [], :void
-  init_crystal
-  undef init_crystal
 
   attach_function :hello_crystie, [], :void
 end
@@ -83,16 +76,6 @@ module HaskieLib
   extend FFI::Library
   ffi_lib File.join(__dir__, 'haskie/libhaskie.so')
 
-  attach_function :init_haskell, [], :void
-  init_haskell
-  undef init_haskell
-
-  at_exit do
-    attach_function :exit_haskell, [], :void
-    exit_haskell
-    undef exit_haskell
-  end
-
   attach_function :hello_haskie, [], :void
 end
 
@@ -129,7 +112,7 @@ end
 
 # pipenv run bundle exec rubie.rb
 
-if $PROGRAM_NAME == __FILE__
+if File.expand_path($PROGRAM_NAME) == File.expand_path(__FILE__)
   RustieLib.hello_rustie
 
   CrystieLib.hello_crystie
@@ -140,7 +123,7 @@ if $PROGRAM_NAME == __FILE__
 
   CpptieLib.hello_cpptie
 
-  # JulitieLib.hello_julitie
+  JulitieLib.hello_julitie
 
   ZiggieLib.hello_ziggie
 

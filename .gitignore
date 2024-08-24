@@ -1,6 +1,7 @@
 .rake_tasks~
 *.so
 *.so.*
+*.o
 cittie/build/
 cpptie/build/
 gotie/libgotie.h
