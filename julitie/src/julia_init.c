@@ -62,8 +62,9 @@ void set_depot_load_path(const char *root_dir) {
 }
 
 // Modified https://github.com/JuliaLang/PackageCompiler.jl/blob/master/src/julia_init.c
+// multiple calls to init or exit cause crash, so the easiest way is not to expose them to the user
 
-void init_julia(void) {
+__attribute__((constructor)) void init_julia(void) {
     int argc = 0;
     char **argv = { NULL };
     setup_args(argc, argv);
@@ -78,4 +79,4 @@ void init_julia(void) {
     julia_init(JL_IMAGE_CWD);
 }
 
-void exit_julia(void) { jl_atexit_hook(0); }
+__attribute__((destructor)) void exit_julia(void) { jl_atexit_hook(0); }

@@ -7,12 +7,6 @@ julitie_loader = FFI()
 JulitieLib = julitie_loader.dlopen(os.path.join(os.getcwd(), 'julitie/libjulitie.so'))
 
 julitie_loader.cdef("""
-     void init_julia();
-""")
-JulitieLib.init_julia()
-del JulitieLib.init_julia
-
-julitie_loader.cdef("""
      void hello_julitie();
 """)
 

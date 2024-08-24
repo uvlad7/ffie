@@ -9,10 +9,6 @@ module JulitieLib
   extend FFI::Library
   ffi_lib File.join(__dir__, 'julitie/libjulitie.so')
 
-  attach_function :init_julia, [], :void
-  init_julia
-  undef init_julia
-
   attach_function :hello_julitie, [], :void
 end
 
