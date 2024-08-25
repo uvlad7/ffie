@@ -58,8 +58,19 @@ macro unloadTime*(procAst: untyped): untyped =
 proc init_nim() {.load_time.} =
   NimMain()
  
+# import terminal
+# import termtools
+import nimcolor
+# import paint
+
 proc hello_nimmie(): void {.exportc, dynlib, cdecl.} =
-  echo "Hello from Nim!"
- 
+  # is needed https://forum.nim-lang.org/t/7291 for this
+  # https://github.com/iffy/termtools/blob/7c4cc7e0fb309989aabf52a5c20ae84ea1821864/src/termtools/color.nim#L85
+  # to work
+  # enableTrueColors()
+  # echo "Hello from ", "Nim".fgColor("#eec643"), "!"
+  echo "Hello from ", "&eec643;Nim".color, "!"
+  # echo "Hello from ", ("Nim" @ "#EEC643"), "!"
+
 proc exit_nim() {.unload_time.} =
   GC_FullCollect()
