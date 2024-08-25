@@ -1,6 +1,15 @@
 from invoke import task
+import os
+import sys
 
-LIBS = set(["crystie", "rustie", "gotie", "cittie", "cpptie", "julitie", "ziggie", "dittie", "swiftie", "haskie", "lltie"])
+LIBS = set(["crystie", "rustie", "gotie", "cittie", "cpptie", "julitie", "ziggie", "dittie", "swiftie", "haskie", "lltie", "nimmie"])
+
+# https://github.com/ruby/rake/blob/c6829ffcdfab370d1b5fe788f9ce928f81a8ac56/lib/rake/application.rb#L720
+original_dir = os.getcwd()
+location = os.path.dirname(os.path.abspath(__file__))
+os.chdir(location)
+if original_dir != location:
+    print("(in {})".format(os.getcwd()), file=sys.stderr)
 
 @task(default=True)
 def build(c):
