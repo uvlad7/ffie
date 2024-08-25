@@ -13,6 +13,7 @@ Hello from D!
 Hello from Swift!
 Hello from Haskell!
 Hello from LLVM!
+Hello from Nim!
 Hello from RubyLLVM!
 Hello from Ruby!
 Hello from Python!
@@ -27,6 +28,7 @@ Hello from D!
 Hello from Swift!
 Hello from Haskell!
 Hello from LLVM!
+Hello from Nim!
 Hello from Python!
 </samp><pre>
 <div align="center">
