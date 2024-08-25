@@ -44,7 +44,7 @@ module LlRubie
     end
     LLVM.init_jit
 
-    engine = LLVM::JITCompiler.new(mod)
+    engine = LLVM::JITCompiler.new(mod, opt_level: 2)
     engine.run_function(hello_llrubie_fn)
     engine.dispose
   end
