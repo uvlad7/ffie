@@ -127,9 +127,7 @@ linuxbrew install swift # 5.10
 ## Zig
 
 ```bash
-# todo: migrate to latest zig and its own package manager
-$ mise use zig@0.10.1
-# install gyro https://github.com/mattnite/gyro/releases
+$ mise use zig@0.13.1
 ```
 
 ## Nim
@@ -142,3 +140,5 @@ $ mise use nim@2.0.2
  - Check `NO_COLOR` everywhere (only Crystal, Swift, RubyLLVM and Ruby implementations do that)
  - Check `tty?` everywhere (only Swift implementation does that)
  - Check for truecolor support and fallback to ansi/ascii
+ - Fix Crystal - impl exit_crystal to make `at_exit` work, get rid of [init](https://stackoverflow.com/a/32701238/13500870)
+ - Python atexit from pycall (use Py_Finalize)
