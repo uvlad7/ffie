@@ -82,6 +82,13 @@ module LltieLib
   attach_function :hello_lltie, [], :void
 end
 
+module NimmieLib
+  extend FFI::Library
+  ffi_lib File.join(__dir__, 'nimmie/libnimmie.so')
+
+  attach_function :hello_nimmie, [], :void
+end
+
 module Rubie
   def self.hello_rubie
     # puts "Hello from #{"Ruby".colorize(:red)}!"
@@ -91,20 +98,12 @@ module Rubie
   end
 end
 
-module LlRubie
-  extend(catch(:wrapper) { load(File.join(__dir__, 'llrubie/llrubie.rb'), true) })
-end
+require_relative 'llrubie/llrubie'
 
-module Pythonie
-  extend PyCall::Import
-  pyimport :sys
-  sys.path.insert(0, '')
-  pyfrom :pythonie, import: :Pythonie
-
-  def self.hello_pythonie
-    Pythonie.hello_pythonie
-  end
-end
+extend PyCall::Import
+pyimport :sys
+sys.path.insert(0, '')
+pyfrom :pythonie, import: :Pythonie
 
 # pipenv run bundle exec rubie.rb
 
@@ -132,6 +131,8 @@ if File.expand_path($PROGRAM_NAME) == File.expand_path(__FILE__)
   LltieLib.hello_lltie
 
   LlRubie.hello_llrubie
+
+  NimmieLib.hello_nimmie
 
   Rubie.hello_rubie
 
