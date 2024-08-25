@@ -135,3 +135,8 @@ $ mise use zig@0.10.1
 ```
 $ mise use nim@2.0.2
 ```
+
+# Todo:
+ - Check `NO_COLOR` everywhere (only Crystal, Swift, RubyLLVM and Ruby implementations do that)
+ - Check `tty?` everywhere (only Swift implementation does that)
+ - Check for truecolor support and fallback to ansi/ascii
