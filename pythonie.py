@@ -80,6 +80,13 @@ lltie_loader.cdef("""
      void hello_lltie();
 """)
 
+nimmie_loader = FFI()
+NimmieLib = nimmie_loader.dlopen(os.path.join(os.getcwd(), 'nimmie/libnimmie.so'))
+
+nimmie_loader.cdef("""
+     void hello_nimmie();
+""")
+
 class Pythonie:
     def hello_pythonie():
         # pycolor = ColorRGB(57, 118, 170)
@@ -109,5 +116,7 @@ if __name__ == "__main__":
     HaskieLib.hello_haskie()
 
     LltieLib.hello_lltie()
+
+    NimmieLib.hello_nimmie()
 
     Pythonie.hello_pythonie()

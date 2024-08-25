@@ -130,9 +130,9 @@ if File.expand_path($PROGRAM_NAME) == File.expand_path(__FILE__)
 
   LltieLib.hello_lltie
 
-  LlRubie.hello_llrubie
-
   NimmieLib.hello_nimmie
+
+  LlRubie.hello_llrubie
 
   Rubie.hello_rubie
 
