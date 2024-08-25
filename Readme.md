@@ -1,6 +1,6 @@
 This project is created to demonstrate how to create shared libraries in different languages and use them from Ruby and Python
 
-<pre><samp>
+```bash
 vladimir@np940x5n:~/ffie$ bundle exec rake > /dev/null 2>&1 && pipenv run bundle exec ./rubie.rb && pipenv run ./pythonie.py
 Hello from Rust!
 Hello from Crystal!
@@ -30,7 +30,7 @@ Hello from Haskell!
 Hello from LLVM!
 Hello from Nim!
 Hello from Python!
-</samp><pre>
+```
 <div align="center">
     <img src="Readme.svg" alt="teminal output">
 </div>
@@ -129,7 +129,7 @@ linuxbrew install swift # 5.10
 ```bash
 # todo: migrate to latest zig and its own package manager
 $ mise use zig@0.10.1
-# gyro https://github.com/mattnite/gyro/releases
+# install gyro https://github.com/mattnite/gyro/releases
 ```
 
 ## Nim
