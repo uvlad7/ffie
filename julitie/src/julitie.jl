@@ -12,9 +12,16 @@ Base.@ccallable function hello_julitie()::Nothing
 	# 	Crayon(foreground = (57, 150, 70)), "i",
 	# 	Crayon(foreground = (145, 89, 162)), "a",
 	# 	Crayon(reset = true), "!")
-		println("Hello from ", 
+		println("Hello from ",
 		Crayon(foreground = ((145, 89, 162))), "Julia",
 		Crayon(reset = true), "!")
+		atexit(bye_julitie)
+end
+
+Base.@ccallable function bye_julitie()::Nothing
+	println("Bye from ",
+	Crayon(foreground = ((145, 89, 162))), "Julia",
+	Crayon(reset = true), "!")
 end
 
 # export hello_julitie

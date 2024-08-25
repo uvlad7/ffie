@@ -2,6 +2,7 @@
 from cffi import FFI
 import os
 from colorist import ColorRGB
+import atexit
 
 julitie_loader = FFI()
 JulitieLib = julitie_loader.dlopen(os.path.join(os.getcwd(), 'julitie/libjulitie.so'))
@@ -92,6 +93,7 @@ class Pythonie:
         # pycolor = ColorRGB(57, 118, 170)
         pycolor = ColorRGB(246, 203, 0)
         print(f"Hello from {pycolor}Python{pycolor.OFF}!")
+        atexit.register(lambda: print(f"Bye from {pycolor}Python{pycolor.OFF}!"))
 
 
 if __name__ == "__main__":

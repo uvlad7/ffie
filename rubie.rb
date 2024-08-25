@@ -95,6 +95,9 @@ module Rubie
     # puts "Hello from #{Rainbow("Ruby").color(176, 18, 5)}!"
     # puts "Hello from #{Rainbow("Ruby").color(136, 17, 2)}!"
     puts "Hello from #{Paint['Ruby', [136, 17, 2]]}!"
+    at_exit do
+      puts "Bye from #{Paint['Ruby', [136, 17, 2]]}!"
+    end
   end
 end
 
@@ -104,6 +107,18 @@ extend PyCall::Import
 pyimport :sys
 sys.path.insert(0, '')
 pyfrom :pythonie, import: :Pythonie
+
+module PyCallFFI
+  extend FFI::Library
+  ffi_lib FFI::CURRENT_PROCESS
+  # raises NotFoundError if called early, as pycall uses lazy initialization
+  # so call this when some python calls were already executed
+  attach_function :Py_FinalizeEx, [], :int
+end
+
+at_exit do
+  PyCallFFI.Py_FinalizeEx()
+end
 
 # pipenv run bundle exec rubie.rb
 
