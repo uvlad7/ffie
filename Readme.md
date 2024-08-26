@@ -17,6 +17,10 @@ Hello from Nim!
 Hello from RubyLLVM!
 Hello from Ruby!
 Hello from Python!
+Bye from Ruby!
+Bye from Python!
+Bye from Crystal!
+Bye from Julia!
 Hello from Rust!
 Hello from Crystal!
 Hello from Go!
@@ -30,6 +34,9 @@ Hello from Haskell!
 Hello from LLVM!
 Hello from Nim!
 Hello from Python!
+Bye from Python!
+Bye from Crystal!
+Bye from Julia!
 ```
 <div align="center">
     <img src="Readme.svg" alt="teminal output">

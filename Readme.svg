@@ -18,6 +18,10 @@ Hello from <font color="#EEC643">Nim</font>!
 Hello from <font color="#881102">Ruby</font><font color="#2B617A">LLVM</font>!
 Hello from <font color="#881102">Ruby</font>!
 Hello from <font color="#F6CB00">Python</font>!
+Bye from <font color="#881102">Ruby</font>!
+Bye from <font color="#F6CB00">Python</font>!
+Bye from <font color="#776790">Crystal</font>!
+Bye from <font color="#9159A2">Julia</font>!
 Hello from <font color="#E33A25">Rust</font>!
 Hello from <font color="#776790">Crystal</font>!
 Hello from <font color="#11ABB6">Go</font>!
@@ -31,6 +35,9 @@ Hello from <font color="#8E4E8A">Haskell</font>!
 Hello from <font color="#2B617A">LLVM</font>!
 Hello from <font color="#EEC643">Nim</font>!
 Hello from <font color="#F6CB00">Python</font>!
+Bye from <font color="#F6CB00">Python</font>!
+Bye from <font color="#776790">Crystal</font>!
+Bye from <font color="#9159A2">Julia</font>!
             </pre>
         </div>
     </foreignObject>
