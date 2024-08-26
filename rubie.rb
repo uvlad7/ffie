@@ -47,6 +47,13 @@ module CpptieLib
   attach_function :hello_cpptie, [], :void
 end
 
+module SharpieLib
+  extend FFI::Library
+  ffi_lib File.join(__dir__, 'sharpie/libsharpie.so')
+
+  attach_function :hello_sharpie, [], :void
+end
+
 module ZiggieLib
   extend FFI::Library
   ffi_lib File.join(__dir__, 'ziggie/libziggie.so')
@@ -132,6 +139,8 @@ if File.expand_path($PROGRAM_NAME) == File.expand_path(__FILE__)
   CittieLib.hello_cittie
 
   CpptieLib.hello_cpptie
+
+  SharpieLib.hello_sharpie
 
   JulitieLib.hello_julitie
 

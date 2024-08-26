@@ -8,6 +8,7 @@ Hello from Crystal!
 Hello from Go!
 Hello from C!
 Hello from C++!
+Hello from C#!
 Hello from Julia!
 Hello from Zig!
 Hello from D!
@@ -28,6 +29,7 @@ Hello from Crystal!
 Hello from Go!
 Hello from C!
 Hello from C++!
+Hello from C#!
 Hello from Julia!
 Hello from Zig!
 Hello from D!

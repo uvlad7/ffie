@@ -15,3 +15,5 @@ ziggie/zig-cache/
 ziggie/.zig-cache/
 ziggie/zig-out/
 __pycache__/
+sharpie/bin/
+sharpie/obj/

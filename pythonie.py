@@ -46,6 +46,13 @@ cpptie_loader.cdef("""
      void hello_cpptie();
 """)
 
+sharpie_loader = FFI()
+SharpieLib = sharpie_loader.dlopen(os.path.join(os.getcwd(), 'sharpie/libsharpie.so'))
+
+sharpie_loader.cdef("""
+     void hello_sharpie();
+""")
+
 ziggie_loader = FFI()
 ZiggieLib = ziggie_loader.dlopen(os.path.join(os.getcwd(), 'ziggie/libziggie.so'))
 
@@ -106,6 +113,8 @@ if __name__ == "__main__":
     CittieLib.hello_cittie()
 
     CpptieLib.hello_cpptie()
+
+    SharpieLib.hello_sharpie()
 
     JulitieLib.hello_julitie()
 

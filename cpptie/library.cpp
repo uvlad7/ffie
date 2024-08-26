@@ -11,5 +11,6 @@ void hello_cpptie() {
         res << oof::fg_color({ r, g, b }) << text << oof::reset_formatting();
         return res.str();
     };
+    // Color - bottom triangle of the logo
     std::cout << "Hello from " << color("C++", 100, 153, 209) << "!" << std::endl;
 }
