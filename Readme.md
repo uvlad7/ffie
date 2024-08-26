@@ -1,7 +1,8 @@
 This project is created to demonstrate how to create shared libraries in different languages and use them from Ruby and Python
 
 ```bash
-vladimir@np940x5n:~/ffie$ bundle exec rake > /dev/null 2>&1 && pipenv run bundle exec ./rubie.rb && pipenv run ./pythonie.py
+$ bundle exec rake > /dev/null 2>&1
+$ pipenv run bundle exec ./rubie.rb
 Hello from Rust!
 Hello from Crystal!
 Hello from Go!
@@ -21,6 +22,7 @@ Bye from Ruby!
 Bye from Python!
 Bye from Crystal!
 Bye from Julia!
+$ pipenv run ./pythonie.py
 Hello from Rust!
 Hello from Crystal!
 Hello from Go!
@@ -71,19 +73,19 @@ $ sudo apt install dub='1.27.0-2' ldc='1:1.28.0-1ubuntu1'
 or
 
 ```zsh
-brew install dub ldc # versions dub 1.38.1 and ldc 1.39.0
+$ brew install dub ldc # versions dub 1.38.1 and ldc 1.39.0
 ```
 
 ## Ruby, LLVM
 
 ```bash
-linuxbrew install llvm@15
+$ linuxbrew install llvm@15
 ```
 
 or
 
 ```zsh
-brew install llvm@15
+$ brew install llvm@15
 ```
 
 ```bash
@@ -128,7 +130,7 @@ $ mise use rust@1.72.1
 ## Swift
 
 ```bash
-linuxbrew install swift # 5.10
+$ linuxbrew install swift # 5.10
 ```
 
 ## Zig

@@ -1,8 +1,9 @@
 <svg fill="none" viewBox="0 0 800 800" width="800" height="800"
     xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
-        <div width="800" height="800" xmlns="http://www.w3.org/1999/xhtml" style="background-color: #242424; color: #FEFEFE">
-            <pre><font color="#4E9A06"><b>vladimir@np940x5n</b></font>:<font color="#3465A4"><b>~/ffie</b></font>$ rake &gt; /dev/null 2&gt;&amp;1 &amp;&amp; pipenv run bundle exec ./rubie.rb &amp;&amp; pipenv run ./pythonie.py
+        <div width="1800" height="800" xmlns="http://www.w3.org/1999/xhtml" style="background-color: #242424; color: #FEFEFE">
+            <pre>$ bundle exec rake &gt; /dev/null 2&gt;&amp;1
+$ pipenv run bundle exec ./rubie.rb
 Hello from <font color="#E33A25">Rust</font>!
 Hello from <font color="#776790">Crystal</font>!
 Hello from <font color="#11ABB6">Go</font>!
@@ -22,6 +23,7 @@ Bye from <font color="#881102">Ruby</font>!
 Bye from <font color="#F6CB00">Python</font>!
 Bye from <font color="#776790">Crystal</font>!
 Bye from <font color="#9159A2">Julia</font>!
+$ pipenv run ./pythonie.py
 Hello from <font color="#E33A25">Rust</font>!
 Hello from <font color="#776790">Crystal</font>!
 Hello from <font color="#11ABB6">Go</font>!
