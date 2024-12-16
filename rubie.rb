@@ -1,12 +1,14 @@
 #!/usr/bin/env ruby
 require 'ffi'
 require 'pycall/import'
+require 'rjb'
 # require "colorize"
 # require "rainbow"
 require 'paint'
 
 module JulitieLib
   extend FFI::Library
+  # ffi_lib_flags :now, :global
   ffi_lib File.join(__dir__, 'julitie/libjulitie.so')
 
   attach_function :hello_julitie, [], :void
@@ -127,6 +129,12 @@ at_exit do
   PyCallFFI.Py_FinalizeEx()
 end
 
+Rjb.load
+Rjb.add_jar(File.join(__dir__, 'javie/javie.jar'))
+Javie = Rjb.import 'Javie'
+
+at_exit { Rjb.unload }
+
 # pipenv run bundle exec rubie.rb
 
 if File.expand_path($PROGRAM_NAME) == File.expand_path(__FILE__)
@@ -161,4 +169,6 @@ if File.expand_path($PROGRAM_NAME) == File.expand_path(__FILE__)
   Rubie.hello_rubie
 
   Pythonie.hello_pythonie
+
+  Javie.hello_javie
 end

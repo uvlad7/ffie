@@ -5,6 +5,7 @@ GEM
     paint (2.3.0)
     pycall (1.4.2)
     rake (13.0.6)
+    rjb (1.7.3)
     ruby-llvm (15.0.3)
       ffi (~> 1.13)
       rake (>= 12, < 14)
@@ -17,6 +18,7 @@ DEPENDENCIES
   paint
   pycall
   rake
+  rjb
   ruby-llvm
 
 RUBY VERSION

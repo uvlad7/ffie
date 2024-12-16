@@ -6,6 +6,7 @@ gem 'ffi'
 # gem "rainbow"
 gem 'paint'
 gem 'pycall'
+gem 'rjb'
 gem 'ruby-llvm', require: false
 
 group :dev do
