@@ -153,3 +153,7 @@ $ mise use nim@2.0.2
  - Check for truecolor support and fallback to ansi/ascii
  - Fix Crystal - impl exit_crystal to make `at_exit` work, get rid of [init](https://stackoverflow.com/a/32701238/13500870)
  - Python atexit from pycall (use Py_Finalize)
+ - [`Ocaml`](https://ocaml.org/manual/5.0/native.html)
+ - Vala
+ - bindings libs like Magnus, maturin pyo3 and rust-cpython, Rice, pybind11, boost python, etc
+ - auto bindings like UniFFI, GObject, SWIG
