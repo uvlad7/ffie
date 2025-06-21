@@ -4,6 +4,7 @@ GEM
     ffi (1.15.5)
     paint (2.3.0)
     pycall (1.4.2)
+    rainbow (3.1.1)
     rake (13.0.6)
     rjb (1.7.3)
     ruby-llvm (15.0.3)
@@ -17,6 +18,7 @@ DEPENDENCIES
   ffi
   paint
   pycall
+  rainbow
   rake
   rjb
   ruby-llvm

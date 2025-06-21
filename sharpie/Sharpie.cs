@@ -11,6 +11,8 @@ public static class Sharpie
 {
     [UnmanagedCallersOnly(EntryPoint = "hello_sharpie", CallConvs = new[] { typeof(CallConvCdecl) })]
     public static void HelloSharpie() {
+        // Ignore NO_COLOR and other envs
+        Pastel.ConsoleExtensions.Enable();
         // Color - right triangle of the logo
         Console.WriteLine($"Hello from {"C#".Pastel(Color.FromArgb(129, 44, 151))}!");
     }

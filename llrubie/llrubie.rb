@@ -2,7 +2,10 @@
 # http://llvm.org/docs/LangRef.html#module-structure
 require 'llvm/core'
 require 'llvm/execution_engine'
-require 'paint'
+# require 'paint'
+require 'rainbow'
+
+Rainbow.enabled = true
 
 module LlRubie
   public
@@ -10,7 +13,8 @@ module LlRubie
   def self.hello_llrubie
     # modules hold functions and variables
     mod = LLVM::Module.new('hello')
-    hello_str = LLVM::ConstantArray.string("Hello from #{Paint['Ruby', [136, 17, 2]]}#{Paint['LLVM', [43, 97, 122]]}!")
+    # hello_str = LLVM::ConstantArray.string("Hello from #{Paint['Ruby', [136, 17, 2]]}#{Paint['LLVM', [43, 97, 122]]}!")
+    hello_str = LLVM::ConstantArray.string("Hello from #{Rainbow('Ruby').color(136, 17, 2)}#{Rainbow('LLVM').color(43, 97, 122)}!")
 
     # Declare the string constant as a global constant.
     hello = mod.globals.add(hello_str, :hello) do |var|

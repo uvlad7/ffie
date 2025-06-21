@@ -1,5 +1,8 @@
 require "colorize"
 
+# Ignore NO_COLOR
+Colorize.enabled = true
+
 fun init_crystal : Void
   # We need to initialize the GC
   GC.init

@@ -3,8 +3,8 @@ ruby "~> 2.7.0"
 
 gem 'ffi'
 # gem "colorize"
-# gem "rainbow"
-gem 'paint'
+gem 'rainbow'
+# gem 'paint'
 gem 'pycall'
 gem 'rjb'
 gem 'ruby-llvm', require: false

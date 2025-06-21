@@ -3,8 +3,10 @@ require 'ffi'
 require 'pycall/import'
 require 'rjb'
 # require "colorize"
-# require "rainbow"
-require 'paint'
+require 'rainbow'
+# require 'paint'
+
+Rainbow.enabled = true
 
 module JulitieLib
   extend FFI::Library
@@ -102,10 +104,11 @@ module Rubie
   def self.hello_rubie
     # puts "Hello from #{"Ruby".colorize(:red)}!"
     # puts "Hello from #{Rainbow("Ruby").color(176, 18, 5)}!"
-    # puts "Hello from #{Rainbow("Ruby").color(136, 17, 2)}!"
-    puts "Hello from #{Paint['Ruby', [136, 17, 2]]}!"
+    puts "Hello from #{Rainbow("Ruby").color(136, 17, 2)}!"
+    # puts "Hello from #{Paint['Ruby', [136, 17, 2]]}!"
     at_exit do
-      puts "Bye from #{Paint['Ruby', [136, 17, 2]]}!"
+      puts "Bye from #{Rainbow("Ruby").color(136, 17, 2)}!"
+      # puts "Bye from #{Paint['Ruby', [136, 17, 2]]}!"
     end
   end
 end
