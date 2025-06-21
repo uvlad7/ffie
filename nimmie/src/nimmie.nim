@@ -63,6 +63,8 @@ proc init_nim() {.load_time.} =
 import nimcolor
 # import paint
 
+import std/exitprocs
+
 proc hello_nimmie(): void {.exportc, dynlib, cdecl.} =
   # is needed https://forum.nim-lang.org/t/7291 for this
   # https://github.com/iffy/termtools/blob/7c4cc7e0fb309989aabf52a5c20ae84ea1821864/src/termtools/color.nim#L85
@@ -71,6 +73,9 @@ proc hello_nimmie(): void {.exportc, dynlib, cdecl.} =
   # echo "Hello from ", "Nim".fgColor("#eec643"), "!"
   echo "Hello from ", "&eec643;Nim".color, "!"
   # echo "Hello from ", ("Nim" @ "#EEC643"), "!"
+  addExitProc(proc (): void =
+    echo "Bye from ", "&eec643;Nim".color, "!"
+  )
 
 proc exit_nim() {.unload_time.} =
   GC_FullCollect()
