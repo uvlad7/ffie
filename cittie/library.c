@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void bye_cittie(void) {
+static void bye_cittie(void) {
     printf("Bye from \x1b[38;2;%d;%d;%dmC\x1b[0m!\n", 0, 88, 155);
 }
 
