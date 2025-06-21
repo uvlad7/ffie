@@ -32,4 +32,5 @@ void hello_cpptie() {
     // };
     // Color - bottom triangle of the logo
     std::cout << "Hello from " << color("C++", 100, 153, 209) << "!" << std::endl;
+    std::atexit([](){ std::cout << "Bye from " << color("C++", 100, 153, 209) << "!" << std::endl; });
 }

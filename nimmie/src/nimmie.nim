@@ -73,7 +73,7 @@ proc hello_nimmie(): void {.exportc, dynlib, cdecl.} =
   # echo "Hello from ", "Nim".fgColor("#eec643"), "!"
   echo "Hello from ", "&eec643;Nim".color, "!"
   # echo "Hello from ", ("Nim" @ "#EEC643"), "!"
-  addExitProc(proc (): void =
+  addExitProc(proc (): void {.noconv.} =
     echo "Bye from ", "&eec643;Nim".color, "!"
   )
 

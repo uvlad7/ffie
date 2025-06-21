@@ -7,15 +7,11 @@ public class Javie {
         Runtime.getRuntime().addShutdownHook(new Thread() {
             @Override
             public void run() {
-                byeJavie();
+                // f7971d - rgb 247 151 29
+                // CodeWhisperer generated
+                // System.out.println("Bye from \u001B[38;2;247;151;29mJava\u001B[0m!");
+                System.out.println(String.format("Bye from \u001B[38;2;%d;%d;%dmJava\u001B[0m!", 247, 151, 29));
             }
         });
-    }
-
-    private static void byeJavie() {
-        // f7971d - rgb 247 151 29
-        // CodeWhisperer generated
-        // System.out.println("Bye from \u001B[38;2;247;151;29mJava\u001B[0m!");
-        System.out.println(String.format("Bye from \u001B[38;2;%d;%d;%dmJava\u001B[0m!", 247, 151, 29));
     }
 }
