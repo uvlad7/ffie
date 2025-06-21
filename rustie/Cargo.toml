@@ -11,3 +11,4 @@ crate-type   = ["rlib", "cdylib"]
 
 [dependencies]
 ansi_term = "0.12"
+libc = "0.2"
