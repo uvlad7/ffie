@@ -12,4 +12,12 @@
     <PackageReference Include="Pastel" Version="5.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <!-- https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/interop -->
+    <!-- link.exe is used as the linker on Windows -->
+    <!-- <LinkerArg Include="TODO" Condition="$(RuntimeIdentifier.StartsWith('win'))" /> -->
+    <!-- Native AOT invokes clang/gcc as the linker, so arguments need to be prefixed with "-Wl," -->
+    <LinkerArg Include="-Wl,-fini,exit_csharp" Condition="$(RuntimeIdentifier.StartsWith('linux'))" />
+  </ItemGroup>
+
 </Project>
