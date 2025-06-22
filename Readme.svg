@@ -1,7 +1,7 @@
 <svg fill="none" viewBox="0 0 800 1200" width="800" height="1200"
     xmlns="http://www.w3.org/2000/svg">
     <foreignObject width="100%" height="100%">
-        <div width="1800" height="1200" xmlns="http://www.w3.org/1999/xhtml" style="background-color: #242424; color: #FEFEFE">
+        <div width="800" height="1200" xmlns="http://www.w3.org/1999/xhtml" style="background-color: #242424; color: #FEFEFE">
             <pre>$ bundle exec rake &gt; /dev/null 2&gt;&amp;1
 $ pipenv run bundle exec ./rubie.rb
 Hello from <font color="#E33A25">Rust</font>!
