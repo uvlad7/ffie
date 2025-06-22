@@ -19,9 +19,22 @@ Hello from Nim!
 Hello from RubyLLVM!
 Hello from Ruby!
 Hello from Python!
+Hello from Java!
 Bye from Ruby!
+Bye from Java!
 Bye from Python!
+Bye from Rust!
 Bye from Crystal!
+Bye from C!
+Bye from C#!
+Bye from D!
+Bye from Swift!
+Bye from Haskell!
+Bye from LLVM!
+Bye from Nim!
+Bye from RubyLLVM!
+Bye from C++!
+Bye from Go!
 Bye from Julia!
 $ pipenv run ./pythonie.py
 Hello from Rust!
@@ -39,12 +52,31 @@ Hello from LLVM!
 Hello from Nim!
 Hello from Python!
 Bye from Python!
+Bye from Rust!
 Bye from Crystal!
+Bye from C!
+Bye from C#!
+Bye from D!
+Bye from Swift!
+Bye from Haskell!
+Bye from LLVM!
+Bye from Nim!
+Bye from C++!
+Bye from Go!
 Bye from Julia!
 ```
 <div align="center">
-    <img src="Readme.svg" alt="teminal output">
+    <img src="Readme.svg" alt="colorful terminal output">
 </div>
+
+Note that exit "Bye" callbacks order is different than the order in which libraries are loaded and "Hello" functions are called. That's because different approaches are used:
+
+- Ruby, Python and Java use their own `at_exit`/`atexit`/`addShutdownHook` hooks; Ruby triggers Python's and Java's hooks inside its own
+- Rust, C, C++, D, Go, Swift, Zig, both LLVM examples, use C stdlib `atexit`; they aren't called in the reverse order because they are registered across different shared libraries
+- Nim uses it's own std hook, which I suppose also uses the C one under the hood
+- Crystal and Julia use their own standart hooks triggered by runtime shutdown, which is done by finalizers called in `dlclose`
+- C# doesn't have a standart approach and uses a custom solution triggered as the previous ones
+- Haskell doesn't have a standart approach and uses C stdlib `atexit`, runtime shutdown is also deferred into `atexit`
 
 You can use `poetry` instead of `pipenv`.
 
@@ -155,5 +187,6 @@ $ mise use nim@2.0.2
  - Python atexit from pycall (use Py_Finalize)
  - [`Ocaml`](https://ocaml.org/manual/5.0/native.html)
  - Vala
+ - Odin
  - bindings libs like Magnus, maturin pyo3 and rust-cpython, Rice, pybind11, boost python, etc
  - auto bindings like UniFFI, [GObject](https://discourse.gnome.org/t/writing-a-gobject-introspectible-library-in-rust-in-2023/18254), SWIG
