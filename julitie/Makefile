@@ -1,4 +1,4 @@
-sofiles = libjulia.so libjulia.so.1.10.4 libjulia.so.1.10 libjulitie.so
+sofiles = libjulia.so libjulia.so.1.11.5 libjulia.so.1.11 libjulitie.so
 sodirs = julia/
 srcfiles = Manifest.toml Project.toml src/julia_init.c src/julia_init.h src/julitie.h src/julitie.jl test/runtests.jl build.jl
 

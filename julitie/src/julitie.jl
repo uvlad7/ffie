@@ -18,6 +18,7 @@ Base.@ccallable function hello_julitie()::Nothing
 		atexit(bye_julitie)
 end
 
+# Unfortunatelly it doesn't work without ccallable, and ccallable doesn't allow to make it static
 Base.@ccallable function bye_julitie()::Nothing
 	println("Bye from ",
 	Crayon(foreground = ((145, 89, 162))), "Julia",
