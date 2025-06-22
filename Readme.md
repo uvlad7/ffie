@@ -180,10 +180,13 @@ $ mise use nim@2.0.2
 ```
 
 # Todo:
- - Check `NO_COLOR` everywhere (only Crystal, Swift, RubyLLVM and Ruby implementations do that)
- - Check `tty?` everywhere (only Swift implementation does that)
- - Check for truecolor support and fallback to ansi/ascii
- - Fix Crystal - impl exit_crystal to make `at_exit` work, get rid of [init](https://stackoverflow.com/a/32701238/13500870)
+ - Fix Haskell's `build.sh` (copies a wrong `.so`), unify Zig's (symlink)
+ - Hide unnecessary exported symbols: `nm -D */lib*.so | grep -Pe '\s(bye|init|exit)_'`
+ <!-- - Check `NO_COLOR` everywhere (only Crystal, Swift, RubyLLVM and Ruby implementations do that) -->
+ <!-- - Check `tty?` everywhere (only Swift implementation does that) -->
+ <!-- - Check for truecolor support and fallback to ansi/ascii -->
+ <!-- - Fix Crystal - impl exit_crystal to make `at_exit` work, get rid of [init](https://stackoverflow.com/a/32701238/13500870) -->
+ - Get rid of `-init`/`-fini`
  - Python atexit from pycall (use Py_Finalize)
  - [`Ocaml`](https://ocaml.org/manual/5.0/native.html)
  - Vala

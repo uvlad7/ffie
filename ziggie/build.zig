@@ -34,7 +34,7 @@ pub fn build(b: *std.Build) void {
     // ansi-term doesn't do addSharedLib/addStaticLib/addExecutable/addObject
     // so no artifacts
     // https://ziglang.org/documentation/0.13.0/std/#std.Build.Module.addImport
-    lib.root_module.addImport("ansi-term", ansi_term.module("ansi-term"));
+    lib.root_module.addImport("ansi-term", ansi_term.module("ansi_term"));
     
     // This declares intent for the library to be installed into the standard
     // location when the user invokes the "install" step (the default step when
