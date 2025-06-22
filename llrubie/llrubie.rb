@@ -5,12 +5,11 @@ require 'llvm/execution_engine'
 # require 'paint'
 require 'rainbow'
 
-Rainbow.enabled = true
-
 module LlRubie
   public
 
   def self.hello_llrubie
+    Rainbow.enabled = true
     # modules hold functions and variables
     mod = LLVM::Module.new('hello')
     # hello_str = LLVM::ConstantArray.string("Hello from #{Paint['Ruby', [136, 17, 2]]}#{Paint['LLVM', [43, 97, 122]]}!")

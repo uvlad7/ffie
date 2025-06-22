@@ -21,6 +21,7 @@ public static class Sharpie
         // and I failed to trigger them manually, so here is a custom solution
         ProcessExit += (_, _) => 
         {
+            Pastel.ConsoleExtensions.Enable();
             Console.WriteLine($"Bye from {"C#".Pastel(Color.FromArgb(129, 44, 151))}!");
         };
     }

@@ -6,8 +6,6 @@ require 'rjb'
 require 'rainbow'
 # require 'paint'
 
-Rainbow.enabled = true
-
 module JulitieLib
   extend FFI::Library
   # ffi_lib_flags :now, :global
@@ -102,11 +100,13 @@ end
 
 module Rubie
   def self.hello_rubie
+    Rainbow.enabled = true
     # puts "Hello from #{"Ruby".colorize(:red)}!"
     # puts "Hello from #{Rainbow("Ruby").color(176, 18, 5)}!"
     puts "Hello from #{Rainbow("Ruby").color(136, 17, 2)}!"
     # puts "Hello from #{Paint['Ruby', [136, 17, 2]]}!"
     at_exit do
+      Rainbow.enabled = true
       puts "Bye from #{Rainbow("Ruby").color(136, 17, 2)}!"
       # puts "Bye from #{Paint['Ruby', [136, 17, 2]]}!"
     end

@@ -1,8 +1,5 @@
 require "colorize"
 
-# Ignore NO_COLOR
-Colorize.enabled = true
-
 fun init_crystal : Void
   # We need to initialize the GC
   GC.init
@@ -19,8 +16,11 @@ fun hello_crystie : Void
   # puts "Hello from #{"Crystal".colorize(Colorize::ColorRGB.new(0, 0, 0))}!"
   # puts "Hello from #{"Crystal".colorize(Colorize::ColorRGB.new(46, 16, 82))}!"
   # puts "Hello from #{"Crystal".colorize(Colorize::ColorRGB.new(220, 125, 248))}!"
+  # Ignore NO_COLOR
+  Colorize.enabled = true
   puts "Hello from #{"Crystal".colorize(Colorize::ColorRGB.new(119, 103, 144))}!"
   at_exit do
+    Colorize.enabled = true
     puts "Bye from #{"Crystal".colorize(Colorize::ColorRGB.new(119, 103, 144))}!"
   end
 end

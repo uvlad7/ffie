@@ -7,8 +7,17 @@ import Rainbow
 //     }
 // }
 
+import Glibc
+// func atexit(_ fn: () -> Void) -> Int32
+
+func bye_swiftie() -> Void {
+    Rainbow.enabled = true
+    Rainbow.outputTarget = .console
+    print("Bye from ", "Swift".bit24(248,116,50), "!", separator: "")
+}
+
 @_cdecl("hello_swiftie")
-public func mytype_create() -> Void {
+public func hello_swiftie() -> Void {
     // Ignore NO_COLOR
     Rainbow.enabled = true
     // Ignore output isn't a tty
@@ -28,4 +37,5 @@ public func mytype_create() -> Void {
     // print(Rainbow.generateString(for: entry))
 
     // print("Hello from Swift!")
+    atexit(bye_swiftie)
 }
