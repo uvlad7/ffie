@@ -55,7 +55,8 @@ library
     -- other-modules:
 
     -- LANGUAGE extensions used by modules in this package.
-    -- other-extensions:
+    other-extensions: ForeignFunctionInterface
+    -- CApiFFI
 
     -- Other library packages from which modules are imported.
     build-depends: base ^>=4.19.0.0
