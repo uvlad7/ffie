@@ -193,3 +193,4 @@ $ mise use nim@2.0.2
  - Odin
  - bindings libs like Magnus, maturin pyo3 and rust-cpython, Rice, pybind11, boost python, etc
  - auto bindings like UniFFI, [GObject](https://discourse.gnome.org/t/writing-a-gobject-introspectible-library-in-rust-in-2023/18254), SWIG
+ - [`ffi_gen`](https://github.com/neelance/ffi_gen) in comparison with Python's [`FFI`](https://github.com/alphacep/vosk-api/blob/master/python/vosk_builder.py)

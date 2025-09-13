@@ -59,7 +59,7 @@ module LlRubie
     # Definition of hello_llrubie function
     # a function is made up of connected BasicBlocks and must have _one entry and exit
     # basic blocks are (mostly) simple machine instructions and can be connected in a graph
-    hello_llrubie_fn = mod.functions.add('hello_llrubie', [], LLVM::Int32) do |function|
+    hello_llrubie_fn = mod.functions.add('hello_llrubie', [], LLVM.Void) do |function|
       function.basic_blocks.append.build do |b|
         zero = LLVM.Int(0) # a LLVM Constant value
 
@@ -71,13 +71,13 @@ module LlRubie
 
         b.call catexit, bye_llrubie_fn
 
-        b.ret zero
+        b.ret_void
       end
     end
     LLVM.init_jit
 
     engine = LLVM::JITCompiler.new(mod, opt_level: 3)
-    engine.run_function(hello_llrubie_fn).dispose
+    engine.run_function(hello_llrubie_fn)&.dispose
     # Don't dispose because of atexit
     # engine.dispose
   end

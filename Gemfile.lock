@@ -2,12 +2,11 @@ GEM
   remote: https://rubygems.org/
   specs:
     ffi (1.15.5)
-    paint (2.3.0)
     pycall (1.4.2)
     rainbow (3.1.1)
     rake (13.0.6)
     rjb (1.7.3)
-    ruby-llvm (15.0.3)
+    ruby-llvm (17.0.0)
       ffi (~> 1.13)
       rake (>= 12, < 14)
 
@@ -16,12 +15,11 @@ PLATFORMS
 
 DEPENDENCIES
   ffi
-  paint
   pycall
   rainbow
   rake
   rjb
-  ruby-llvm
+  ruby-llvm (~> 17)
 
 RUBY VERSION
    ruby 2.7.8p225

@@ -24,6 +24,9 @@ pub fn build(b: *std.Build) void {
         .optimize = optimize,
         .version = std.SemanticVersion{ .major = 0, .minor = 0, .patch = 1, },
     });
+    lib.linkLibC();
+    lib.addLibraryPath(b.path("../cittie"));
+    lib.linkSystemLibrary("cittie");
     // https://zig.news/edyu/zig-package-manager-wtf-is-zon-558e
     // using ansi-term as a dependency
     const ansi_term = b.dependency("ansi_term", .{

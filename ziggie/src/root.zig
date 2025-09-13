@@ -7,6 +7,31 @@ const Style = style.Style;
 const Color = style.Color;
 const ColorRGB = style.ColorRGB;
 
+extern fn atexit(func: *const fn () callconv(.C) void) callconv(.C) c_int;
+extern fn callme(func: *const fn () callconv(.C) void) callconv(.C) c_int;
+extern fn hello_cittie() callconv(.C) void;
+export fn bye() callconv(.C) void {
+    // std.debug.print("Hello from exit handler!\n", .{});
+}
+
+// https://zig.news/almmiko/building-zig-libraries-with-c-dependencies-25a
+export fn bye_ziggie() callconv(.C) void {
+    const stdout = std.io.getStdOut().writer();
+    const zig_clr = ColorRGB { .r = 246, .g = 163, .b = 29 };
+    const zig_sty = Style{
+        .foreground = Color{ .RGB = zig_clr },
+    };
+    const empty_sty = Style{};
+    stdout.print("Bye from ", .{}) catch return;
+    format.updateStyle(stdout, zig_sty, empty_sty) catch return;
+    stdout.print("Zig", .{}) catch return;
+    format.updateStyle(stdout, empty_sty, zig_sty) catch return;
+    stdout.print("!\n", .{}) catch return;
+}
+
+
+// https://github.com/ziglang/zig/issues/17908#issuecomment-1801125950
+// https://github.com/ziglang/zig/issues/23574#issuecomment-2869397797
 export fn hello_ziggie() void {
     const stdout = std.io.getStdOut().writer();
     const zig_clr = ColorRGB { .r = 246, .g = 163, .b = 29 };
@@ -19,6 +44,18 @@ export fn hello_ziggie() void {
     stdout.print("Zig", .{}) catch return;
     format.updateStyle(stdout, empty_sty, zig_sty) catch return;
     stdout.print("!\n", .{}) catch return;
+    // const ptr: *const fn () callconv(.C) void = bye_ziggie;
+    // stdout.print("bye_ziggie: {}\n", .{ptr}) catch return;
+
+    // Correct function pointer type
+    // const ptr = @extern(*const fn () callconv(.C) void, .{
+    //     .name = "hello_cittie",
+    // });
+    // const func_ptr = @as(*const fn () callconv(.C) void, &bye_ziggie);
+    // const ret = atexit(func_ptr);
+    const ret = callme(&bye_ziggie);
+    stdout.print("callme: {}\n", .{ret}) catch return;
+    // _ = atexit(&bye_ziggie);s
     // stdout.print("Hello from Zig!\n", .{}) catch return;
     // // Returns a `File` corresponding to stdout.
     // const stdout_file = try std.io.getStdOut();

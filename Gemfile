@@ -7,7 +7,7 @@ gem 'rainbow'
 # gem 'paint'
 gem 'pycall'
 gem 'rjb'
-gem 'ruby-llvm', require: false
+gem 'ruby-llvm', '~> 17', require: false
 
 group :dev do
   gem 'rake', require: false
