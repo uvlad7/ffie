@@ -191,5 +191,7 @@ $ mise use nim@2.0.2
  - [`Ocaml`](https://ocaml.org/manual/5.0/native.html)
  - Vala
  - Odin
+ - Mojo
+ - Carbon
  - bindings libs like Magnus, maturin pyo3 and rust-cpython, Rice, pybind11, boost python, etc
  - auto bindings like UniFFI, [GObject](https://discourse.gnome.org/t/writing-a-gobject-introspectible-library-in-rust-in-2023/18254), SWIG
