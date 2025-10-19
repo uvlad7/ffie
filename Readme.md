@@ -113,13 +113,13 @@ $ brew install dub ldc # versions dub 1.38.1 and ldc 1.39.0
 ## Ruby, LLVM
 
 ```bash
-$ linuxbrew install llvm@15
+$ sudo apt install llvm-17
 ```
 
 or
 
 ```zsh
-$ brew install llvm@15
+$ brew install llvm@17
 ```
 
 ```bash
@@ -139,10 +139,22 @@ $ mise use go@1.20.4
 $ mise use haskell@9.8.1 # was 9.2.8, had to upgrade
 ```
 
+## Java
+
+```bash
+$ mise use java@17.0.2
+```
+
 ## Julia
 
 ```bash
 $ mise use julia@1.10.4 # was 1.8.5
+```
+
+## Nim
+
+```
+$ mise use nim@2.0.2
 ```
 
 ## Python
@@ -152,13 +164,19 @@ $ mise use python@3.10.12
 # use pipenv or poetry
 $ mise use pipenv@2023.10.3 && pipenv install --dev
 # or
-$ mise use poetry@1.5.1 && poetry install
+# $ mise use poetry@1.5.1 && poetry install
 ```
 
 ## Rust
 
 ```bash
 $ mise use rust@1.72.1
+```
+
+## C#
+
+```bash
+$ mise use dotnet@8.0.100
 ```
 
 ## Swift
@@ -170,13 +188,7 @@ $ linuxbrew install swift # 5.10
 ## Zig
 
 ```bash
-$ mise use zig@0.13.1
-```
-
-## Nim
-
-```
-$ mise use nim@2.0.2
+$ mise use zig@0.14.0
 ```
 
 # Todo:
