@@ -213,3 +213,4 @@ $ mise use zig@0.14.0
  - GraalVM native - [Java](https://github.com/bestie/libnjkafka/blob/main/Makefile), Ruby
  - bindings libs like Magnus, maturin pyo3 and rust-cpython, Rice, pybind11, boost python, etc
  - auto bindings like UniFFI, [GObject](https://discourse.gnome.org/t/writing-a-gobject-introspectible-library-in-rust-in-2023/18254), SWIG
+ - WASM libs and runtimes
