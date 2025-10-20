@@ -205,5 +205,11 @@ $ mise use zig@0.14.0
  - Odin
  - Mojo
  - Carbon
+ - [Kotlin Native](https://kotlinlang.org/docs/native-dynamic-libraries.html#compile-and-run-the-project)
+ - [Dart](https://github.com/fuzzybinary/dart_shared_library)
+ - [Natalie](https://news.ycombinator.com/item?id=29660883)
+ - MRuby
+ - [Elixir/Erlang](https://stackoverflow.com/questions/31861544/can-elixir-or-erlang-programs-be-compiled-to-a-standalone-binary)
+ - GraalVM native - [Java](https://github.com/bestie/libnjkafka/blob/main/Makefile), Ruby
  - bindings libs like Magnus, maturin pyo3 and rust-cpython, Rice, pybind11, boost python, etc
  - auto bindings like UniFFI, [GObject](https://discourse.gnome.org/t/writing-a-gobject-introspectible-library-in-rust-in-2023/18254), SWIG
