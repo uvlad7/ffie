@@ -16,6 +16,7 @@ Hello from Swift!
 Hello from Haskell!
 Hello from LLVM!
 Hello from Nim!
+Hello from Vala!
 Hello from RubyLLVM!
 Hello from Ruby!
 Hello from Python!
@@ -32,6 +33,7 @@ Bye from Swift!
 Bye from Haskell!
 Bye from LLVM!
 Bye from Nim!
+Bye from Vala!
 Bye from RubyLLVM!
 Bye from C++!
 Bye from Go!
@@ -50,6 +52,7 @@ Hello from Swift!
 Hello from Haskell!
 Hello from LLVM!
 Hello from Nim!
+Hello from Vala!
 Hello from Python!
 Bye from Python!
 Bye from Rust!
@@ -61,6 +64,7 @@ Bye from Swift!
 Bye from Haskell!
 Bye from LLVM!
 Bye from Nim!
+Bye from Vala!
 Bye from C++!
 Bye from Go!
 Bye from Julia!
@@ -72,7 +76,7 @@ Bye from Julia!
 Note that exit "Bye" callbacks order is different than the order in which libraries are loaded and "Hello" functions are called. That's because different approaches are used:
 
 - Ruby, Python and Java use their own `at_exit`/`atexit`/`addShutdownHook` hooks; Ruby triggers Python's and Java's hooks inside its own
-- Rust, C, C++, D, Go, Swift, Zig, both LLVM examples, use C stdlib `atexit`; they aren't called in the reverse order because they are registered across different shared libraries
+- Rust, C, C++, D, Go, Swift, Zig, Vala, both LLVM examples, use C stdlib `atexit`; they aren't called in the reverse order because they are registered across different shared libraries
 - Nim uses it's own std hook, which I suppose also uses the C one under the hood
 - Crystal and Julia use their own standart hooks triggered by runtime shutdown, which is done by finalizers called in `dlclose`
 - C# doesn't have a standart approach and uses a custom solution triggered as the previous ones
