@@ -191,6 +191,18 @@ $ linuxbrew install swift # 5.10
 $ mise use zig@0.14.0
 ```
 
+## Vala
+
+```bash
+$ sudo apt install valac
+```
+
+or
+
+```zsh
+$ brew install vala
+```
+
 # Todo:
  - Fix Haskell's `build.sh` (copies a wrong `.so`), unify Zig's (symlink)
  - Hide unnecessary exported symbols: `nm -D */lib*.so | grep -Pe '\s(bye|init|exit)_'`
@@ -209,6 +221,8 @@ $ mise use zig@0.14.0
  - [Dart](https://github.com/fuzzybinary/dart_shared_library)
  - [Natalie](https://news.ycombinator.com/item?id=29660883)
  - MRuby
+ - [Lisp](https://stackoverflow.com/questions/1797328/programming-languages-that-compile-to-native-code-and-have-the-batteries-include)
+ - Delphi
  - [Elixir/Erlang](https://stackoverflow.com/questions/31861544/can-elixir-or-erlang-programs-be-compiled-to-a-standalone-binary)
  - GraalVM native - [Java](https://github.com/bestie/libnjkafka/blob/main/Makefile), Ruby
  - bindings libs like Magnus, maturin pyo3 and rust-cpython, Rice, pybind11, boost python, etc

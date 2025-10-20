@@ -98,6 +98,13 @@ module NimmieLib
   attach_function :hello_nimmie, [], :void
 end
 
+module VallieLib
+  extend FFI::Library
+  ffi_lib File.join(__dir__, 'vallie/libvallie.so')
+
+  attach_function :hello_vallie, [], :void
+end
+
 module Rubie
   def self.hello_rubie
     Rainbow.enabled = true
@@ -117,7 +124,7 @@ require_relative 'llrubie/llrubie'
 
 extend PyCall::Import
 pyimport :sys
-sys.path.insert(0, '')
+sys.path.insert(0, __dir__)
 pyfrom :pythonie, import: :Pythonie
 
 module PyCallFFI
@@ -166,6 +173,8 @@ if File.expand_path($PROGRAM_NAME) == File.expand_path(__FILE__)
   LltieLib.hello_lltie
 
   NimmieLib.hello_nimmie
+
+  VallieLib.hello_vallie
 
   LlRubie.hello_llrubie
 

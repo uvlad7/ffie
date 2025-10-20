@@ -4,95 +4,104 @@ import os
 from colorist import ColorRGB
 import atexit
 
+dir = os.path.dirname(os.path.realpath(__file__))
+
 julitie_loader = FFI()
-JulitieLib = julitie_loader.dlopen(os.path.join(os.getcwd(), 'julitie/libjulitie.so'))
+JulitieLib = julitie_loader.dlopen(os.path.join(dir, 'julitie/libjulitie.so'))
 
 julitie_loader.cdef("""
      void hello_julitie();
 """)
 
 rustie_loader = FFI()
-RustieLib = rustie_loader.dlopen(os.path.join(os.getcwd(), 'rustie/librustie.so'))
+RustieLib = rustie_loader.dlopen(os.path.join(dir, 'rustie/librustie.so'))
 
 rustie_loader.cdef("""
      void hello_rustie();
 """)
 
 crystie_loader = FFI()
-CrystieLib = crystie_loader.dlopen(os.path.join(os.getcwd(), 'crystie/libcrystie.so'))
+CrystieLib = crystie_loader.dlopen(os.path.join(dir, 'crystie/libcrystie.so'))
 
 crystie_loader.cdef("""
      void hello_crystie();
 """)
 
 gotie_loader = FFI()
-GotieLib = gotie_loader.dlopen(os.path.join(os.getcwd(), 'gotie/libgotie.so'))
+GotieLib = gotie_loader.dlopen(os.path.join(dir, 'gotie/libgotie.so'))
 
 gotie_loader.cdef("""
      void hello_gotie();
 """)
 
 cittie_loader = FFI()
-CittieLib = cittie_loader.dlopen(os.path.join(os.getcwd(), 'cittie/libcittie.so'))
+CittieLib = cittie_loader.dlopen(os.path.join(dir, 'cittie/libcittie.so'))
 
 cittie_loader.cdef("""
      void hello_cittie();
 """)
 
 cpptie_loader = FFI()
-CpptieLib = cpptie_loader.dlopen(os.path.join(os.getcwd(), 'cpptie/libcpptie.so'))
+CpptieLib = cpptie_loader.dlopen(os.path.join(dir, 'cpptie/libcpptie.so'))
 
 cpptie_loader.cdef("""
      void hello_cpptie();
 """)
 
 sharpie_loader = FFI()
-SharpieLib = sharpie_loader.dlopen(os.path.join(os.getcwd(), 'sharpie/libsharpie.so'))
+SharpieLib = sharpie_loader.dlopen(os.path.join(dir, 'sharpie/libsharpie.so'))
 
 sharpie_loader.cdef("""
      void hello_sharpie();
 """)
 
 ziggie_loader = FFI()
-ZiggieLib = ziggie_loader.dlopen(os.path.join(os.getcwd(), 'ziggie/libziggie.so'))
+ZiggieLib = ziggie_loader.dlopen(os.path.join(dir, 'ziggie/libziggie.so'))
 
 ziggie_loader.cdef("""
      void hello_ziggie();
 """)
 
 dittie_loader = FFI()
-DittieLib = dittie_loader.dlopen(os.path.join(os.getcwd(), 'dittie/libdittie.so'))
+DittieLib = dittie_loader.dlopen(os.path.join(dir, 'dittie/libdittie.so'))
 
 dittie_loader.cdef("""
      void hello_dittie();
 """)
 
 swiftie_loader = FFI()
-SwiftieLib = swiftie_loader.dlopen(os.path.join(os.getcwd(), 'swiftie/libswiftie.so'))
+SwiftieLib = swiftie_loader.dlopen(os.path.join(dir, 'swiftie/libswiftie.so'))
 
 swiftie_loader.cdef("""
      void hello_swiftie();
 """)
 
 haskie_loader = FFI()
-HaskieLib = haskie_loader.dlopen(os.path.join(os.getcwd(), 'haskie/libhaskie.so'))
+HaskieLib = haskie_loader.dlopen(os.path.join(dir, 'haskie/libhaskie.so'))
 
 haskie_loader.cdef("""
      void hello_haskie();
 """)
 
 lltie_loader = FFI()
-LltieLib = lltie_loader.dlopen(os.path.join(os.getcwd(), 'lltie/liblltie.so'))
+LltieLib = lltie_loader.dlopen(os.path.join(dir, 'lltie/liblltie.so'))
 
 lltie_loader.cdef("""
      void hello_lltie();
 """)
 
 nimmie_loader = FFI()
-NimmieLib = nimmie_loader.dlopen(os.path.join(os.getcwd(), 'nimmie/libnimmie.so'))
+NimmieLib = nimmie_loader.dlopen(os.path.join(dir, 'nimmie/libnimmie.so'))
 
 nimmie_loader.cdef("""
      void hello_nimmie();
+""")
+
+vallie_loader = FFI()
+VallieLib = vallie_loader.dlopen(os.path.join(dir, 'vallie/libvallie.so'))
+
+vallie_loader.cdef("""
+     void hello_vallie();
 """)
 
 class Pythonie:
@@ -129,5 +138,7 @@ if __name__ == "__main__":
     LltieLib.hello_lltie()
 
     NimmieLib.hello_nimmie()
+
+    VallieLib.hello_vallie()
 
     Pythonie.hello_pythonie()
