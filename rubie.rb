@@ -94,6 +94,12 @@ require 'gobject-introspection'
 # Bye from GObject Vala!
 
 
+# GObjectIntrospection.prepend_typelib_path './gvallie'
+# 2.7.0 :027 > GObjectIntrospection.load('gvallie', version: '0.1').hello
+# Hello from GObject Vala!
+# => nil 
+
+
 module JulitieLib
   extend FFI::Library
   # ffi_lib_flags :now, :global
