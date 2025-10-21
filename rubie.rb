@@ -100,6 +100,19 @@ require 'gobject-introspection'
 # => nil 
 
 
+# 2.7.0 :029 > mod = Module.new
+#  => #<Module:0x00005c508eff2bd0> 
+# 2.7.0 :030 > loader = GObjectIntrospection::Loader.new(mod)
+#  => #<GObjectIntrospection::Loader:0x00005c508ef31ed0 @base_module=#<Module:0x00005c508eff2bd0>, @version=nil> 
+# 2.7.0 :031 > loader.version = '0.1'
+#  => "0.1" 
+# 2.7.0 :032 > loader.load 'gvallie'
+#  => nil 
+# 2.7.0 :033 > mod.hello
+# Hello from GObject Vala!
+#  => nil 
+
+
 module JulitieLib
   extend FFI::Library
   # ffi_lib_flags :now, :global
