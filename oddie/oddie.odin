@@ -10,17 +10,17 @@ Color :: struct {
 	b: u8,
 }
 
+color := Color{0, 84, 146}
+
 bye_oddie :: proc "c" () {
     context = runtime.default_context()
 
-    color := Color{0, 84, 146}
     fmt.printf("Bye from \x1b[38;2;%d;%d;%dmOdin\x1b[0m!\n", color.r, color.g, color.b)
 }
 
 @(export)
 hello_oddie :: proc() {
     // Using fmt.printf for formatted output
-    color := Color{0, 84, 146}
     fmt.printf("Hello from \x1b[38;2;%d;%d;%dmOdin\x1b[0m!\n", color.r, color.g, color.b)
     libc.atexit(bye_oddie)
 }

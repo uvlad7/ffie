@@ -104,6 +104,13 @@ vallie_loader.cdef("""
      void hello_vallie();
 """)
 
+oddie_loader = FFI()
+OddieLib = oddie_loader.dlopen(os.path.join(dir, 'oddie/liboddie.so'))
+
+oddie_loader.cdef("""
+     void hello_oddie();
+""")
+
 class Pythonie:
     def hello_pythonie():
         # pycolor = ColorRGB(57, 118, 170)
@@ -140,5 +147,7 @@ if __name__ == "__main__":
     NimmieLib.hello_nimmie()
 
     VallieLib.hello_vallie()
+
+    OddieLib.hello_oddie()
 
     Pythonie.hello_pythonie()

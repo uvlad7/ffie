@@ -17,6 +17,7 @@ Hello from Haskell!
 Hello from LLVM!
 Hello from Nim!
 Hello from Vala!
+Hello from Odin!
 Hello from RubyLLVM!
 Hello from Ruby!
 Hello from Python!
@@ -33,6 +34,7 @@ Bye from Haskell!
 Bye from LLVM!
 Bye from Nim!
 Bye from Vala!
+Bye from Odin!
 Bye from RubyLLVM!
 Bye from C++!
 Bye from Go!
@@ -52,6 +54,7 @@ Hello from Haskell!
 Hello from LLVM!
 Hello from Nim!
 Hello from Vala!
+Hello from Odin!
 Hello from Python!
 Bye from Python!
 Bye from Rust!
@@ -63,6 +66,7 @@ Bye from Haskell!
 Bye from LLVM!
 Bye from Nim!
 Bye from Vala!
+Bye from Odin!
 Bye from C++!
 Bye from Go!
 Bye from Julia!
@@ -203,6 +207,12 @@ or
 
 ```zsh
 $ brew install vala
+```
+
+## Odin
+
+```bash
+$ mise use odin@dev-2025-06
 ```
 
 # Todo:
