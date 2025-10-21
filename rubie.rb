@@ -105,6 +105,13 @@ module VallieLib
   attach_function :hello_vallie, [], :void
 end
 
+module OddieLib
+  extend FFI::Library
+  ffi_lib File.join(__dir__, 'oddie/liboddie.so')
+
+  attach_function :hello_oddie, [], :void
+end
+
 module Rubie
   def self.hello_rubie
     Rainbow.enabled = true
@@ -175,6 +182,8 @@ if File.expand_path($PROGRAM_NAME) == File.expand_path(__FILE__)
   NimmieLib.hello_nimmie
 
   VallieLib.hello_vallie
+
+  OddieLib.hello_oddie
 
   LlRubie.hello_llrubie
 
