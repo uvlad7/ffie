@@ -105,6 +105,13 @@ module VallieLib
   attach_function :hello_vallie, [], :void
 end
 
+module GenieLib
+  extend FFI::Library
+  ffi_lib File.join(__dir__, 'genie/libgenie.so')
+
+  attach_function :hello_genie, [], :void
+end
+
 module OddieLib
   extend FFI::Library
   ffi_lib File.join(__dir__, 'oddie/liboddie.so')
@@ -182,6 +189,8 @@ if File.expand_path($PROGRAM_NAME) == File.expand_path(__FILE__)
   NimmieLib.hello_nimmie
 
   VallieLib.hello_vallie
+
+  GenieLib.hello_genie
 
   OddieLib.hello_oddie
 

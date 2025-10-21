@@ -17,6 +17,7 @@ Hello from Haskell!
 Hello from LLVM!
 Hello from Nim!
 Hello from Vala!
+Hello from Genie!
 Hello from Odin!
 Hello from RubyLLVM!
 Hello from Ruby!
@@ -34,6 +35,7 @@ Bye from Haskell!
 Bye from LLVM!
 Bye from Nim!
 Bye from Vala!
+Bye from Genie!
 Bye from Odin!
 Bye from RubyLLVM!
 Bye from C++!
@@ -54,6 +56,7 @@ Hello from Haskell!
 Hello from LLVM!
 Hello from Nim!
 Hello from Vala!
+Hello from Genie!
 Hello from Odin!
 Hello from Python!
 Bye from Python!
@@ -66,6 +69,7 @@ Bye from Haskell!
 Bye from LLVM!
 Bye from Nim!
 Bye from Vala!
+Bye from Genie!
 Bye from Odin!
 Bye from C++!
 Bye from Go!
@@ -78,7 +82,7 @@ Bye from Julia!
 Note that exit "Bye" callbacks order is different than the order in which libraries are loaded and "Hello" functions are called. That's because different approaches are used:
 
 - Ruby, Python and Java use their own `at_exit`/`atexit`/`addShutdownHook` hooks; Ruby triggers Python's and Java's hooks inside its own
-- Rust, C, C++, D, Go, Swift, Zig, Vala, both LLVM examples, use C stdlib `atexit`; they aren't called in the reverse order because they are registered across different shared libraries
+- Rust, C, C++, D, Go, Swift, Zig, Vala, Genie, Odin, both LLVM examples, use C stdlib `atexit`; they aren't called in the reverse order because they are registered across different shared libraries
 - Nim uses it's own std hook, which I suppose also uses the C one under the hood
 - Crystal and Julia use their own standart hooks triggered by runtime shutdown, which is done by finalizers called in `dlclose`
 - C# doesn't have a standart approach and uses a custom solution triggered as the previous ones
@@ -197,7 +201,7 @@ $ linuxbrew install swift # 5.10
 $ mise use zig@0.14.0
 ```
 
-## Vala
+## Vala and Genie
 
 ```bash
 $ sudo apt install valac
@@ -217,6 +221,7 @@ $ mise use odin@dev-2025-06
 
 # Todo:
  - Fix Haskell's `build.sh` (copies a wrong `.so`), unify Zig's (symlink)
+ - Fix C# at exit
  - Hide unnecessary exported symbols: `nm -D */lib*.so | grep -Pe '\s(bye|init|exit)_'`
  <!-- - Check `NO_COLOR` everywhere (only Crystal, Swift, RubyLLVM and Ruby implementations do that) -->
  <!-- - Check `tty?` everywhere (only Swift implementation does that) -->
@@ -225,8 +230,8 @@ $ mise use odin@dev-2025-06
  - Get rid of `-init`/`-fini`
  - Python atexit from pycall (use Py_Finalize)
  - [`Ocaml`](https://ocaml.org/manual/5.0/native.html)
- - Vala
- - Odin
+ <!-- - Vala -->
+ <!-- - Odin -->
  - Mojo
  - Carbon
  - [Kotlin Native](https://kotlinlang.org/docs/native-dynamic-libraries.html#compile-and-run-the-project)

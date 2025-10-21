@@ -104,6 +104,13 @@ vallie_loader.cdef("""
      void hello_vallie();
 """)
 
+genie_loader = FFI()
+GenieLib = genie_loader.dlopen(os.path.join(dir, 'genie/libgenie.so'))
+
+genie_loader.cdef("""
+     void hello_genie();
+""")
+
 oddie_loader = FFI()
 OddieLib = oddie_loader.dlopen(os.path.join(dir, 'oddie/liboddie.so'))
 
@@ -147,6 +154,8 @@ if __name__ == "__main__":
     NimmieLib.hello_nimmie()
 
     VallieLib.hello_vallie()
+
+    GenieLib.hello_genie()
 
     OddieLib.hello_oddie()
 

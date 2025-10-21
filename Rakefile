@@ -1,6 +1,6 @@
 require 'set'
 
-LIBS = %w[crystie rustie gotie cittie cpptie julitie ziggie dittie swiftie haskie lltie nimmie sharpie javie vallie oddie].to_set
+LIBS = %w[crystie rustie gotie cittie cpptie julitie ziggie dittie swiftie haskie lltie nimmie sharpie javie vallie oddie genie].to_set
 
 task :build do
   # sh 'bundle install'
