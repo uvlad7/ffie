@@ -26,7 +26,7 @@ public static class Sharpie
         };
     }
 
-    // TODO: Use c atexit approach?
+    // TODO: Use c atexit approach? Crashes if HelloSharpie wasn't called (even with empty body)
     [UnmanagedCallersOnly(EntryPoint = "exit_csharp", CallConvs = new[] { typeof(CallConvCdecl) })]
     public static void ExitCSharp() {
         ProcessExit?.Invoke(null, EventArgs.Empty);

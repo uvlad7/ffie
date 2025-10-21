@@ -27,7 +27,6 @@ Bye from Python!
 Bye from Rust!
 Bye from Crystal!
 Bye from C!
-Bye from C#!
 Bye from D!
 Bye from Swift!
 Bye from Haskell!
@@ -58,7 +57,6 @@ Bye from Python!
 Bye from Rust!
 Bye from Crystal!
 Bye from C!
-Bye from C#!
 Bye from D!
 Bye from Swift!
 Bye from Haskell!
