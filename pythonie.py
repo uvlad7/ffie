@@ -4,34 +4,9 @@ import os
 from colorist import ColorRGB
 import atexit
 
-
-# vladimir@np940x5n:~/ffie (master)$ ipython                                                                                                                                                                                                                                       
-# Python 3.10.12 (main, Oct  9 2023, 12:53:10) [GCC 11.4.0]
-# Type 'copyright', 'credits' or 'license' for more information
-# IPython 8.16.1 -- An enhanced Interactive Python. Type '?' for help.
-
-# 3.10.12 :001 > import gi
-
-# 3.10.12 :002 > gi.require_version('GIRepository', '2.0')
-#  ...
-#  ...
-
-# 3.10.12 :003 > from gi.repository import GIRepository
-#  ...
-#  ...
-
-# 3.10.12 :004 > GIRepository.Repository.prepend_search_path('/home/vladimir/ffie/gvallie')
-
-# 3.10.12 :005 > gi.require_version('gvallie', '0.1')
-
-# 3.10.12 :006 > from gi.repository import gvallie
-
-# 3.10.12 :007 > gvallie.hello()
-# Hello from GObject Vala!
-
-# 3.10.12 :008 >                                                                                                                                                                                                                                                                             
-# Bye from GObject Vala!
-
+import gi
+gi.require_version('GIRepository', '2.0')
+from gi.repository import GIRepository
 
 dir = os.path.dirname(os.path.realpath(__file__))
 
@@ -147,6 +122,10 @@ oddie_loader.cdef("""
      void hello_oddie();
 """)
 
+GIRepository.Repository.prepend_search_path(os.path.join(dir, 'gvallie'))
+gi.require_version('gvallie', '0.1')
+from gi.repository import gvallie as GVallie
+
 class Pythonie:
     def hello_pythonie():
         # pycolor = ColorRGB(57, 118, 170)
@@ -187,5 +166,7 @@ if __name__ == "__main__":
     GenieLib.hello_genie()
 
     OddieLib.hello_oddie()
+
+    GVallie.hello()
 
     Pythonie.hello_pythonie()

@@ -6,9 +6,11 @@ name = "pypi"
 [packages]
 cffi = "1.15.1"
 colorist = "1.6.0"
+PyGObject = "3.50.2"
 
 [dev-packages]
 invoke = "2.1.3"
+ipython = "*"
 
 [requires]
 python_version = "3.10"
