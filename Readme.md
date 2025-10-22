@@ -83,8 +83,8 @@ Note that exit "Bye" callbacks order is different than the order in which librar
 
 - Ruby, Python and Java use their own `at_exit`/`atexit`/`addShutdownHook` hooks; Ruby triggers Python's and Java's hooks inside its own
 - Rust, C, C++, D, Go, Swift, Zig, Vala, Genie, Odin, both LLVM examples, use C stdlib `atexit`; they aren't called in the reverse order because they are registered across different shared libraries
-- Nim uses it's own std hook, which I suppose also uses the C one under the hood
-- Crystal and Julia use their own standart hooks triggered by runtime shutdown, which is done by finalizers called in `dlclose`
+- Nim uses its own std hook, triggered in the finalizer executed on `dlclose` (custom implemented destructor annotation)
+- Crystal (fini) and Julia (C wrapper destructor annotation) use their own standart hooks triggered by runtime shutdown, which is done by finalizers called in `dlclose`
 - C# doesn't have a standart approach and uses a custom solution triggered as the previous ones
 - Haskell doesn't have a standart approach and uses C stdlib `atexit`, runtime shutdown is also deferred into `atexit`
 
