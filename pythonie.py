@@ -167,6 +167,6 @@ if __name__ == "__main__":
 
     OddieLib.hello_oddie()
 
-    GVallie.hello()
+    GVallie.hello_gvallie()
 
     Pythonie.hello_pythonie()

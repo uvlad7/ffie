@@ -198,7 +198,7 @@ if File.expand_path($PROGRAM_NAME) == File.expand_path(__FILE__)
 
   OddieLib.hello_oddie
 
-  GVallie.hello
+  GVallie.hello_gvallie
 
   LlRubie.hello_llrubie
 
