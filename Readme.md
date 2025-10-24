@@ -19,6 +19,7 @@ Hello from Nim!
 Hello from Vala!
 Hello from Genie!
 Hello from Odin!
+Hello from Vala/GObject!
 Hello from RubyLLVM!
 Hello from Ruby!
 Hello from Python!
@@ -31,13 +32,14 @@ Bye from Crystal!
 Bye from C!
 Bye from D!
 Bye from Swift!
-Bye from Haskell!
 Bye from LLVM!
 Bye from Nim!
 Bye from Vala!
 Bye from Genie!
 Bye from Odin!
+Bye from Haskell!
 Bye from RubyLLVM!
+Bye from Vala/GObject!
 Bye from C++!
 Bye from Go!
 Bye from Julia!
@@ -58,6 +60,7 @@ Hello from Nim!
 Hello from Vala!
 Hello from Genie!
 Hello from Odin!
+Hello from Vala/GObject!
 Hello from Python!
 Bye from Python!
 Bye from Rust!
@@ -71,6 +74,7 @@ Bye from Nim!
 Bye from Vala!
 Bye from Genie!
 Bye from Odin!
+Bye from Vala/GObject!
 Bye from C++!
 Bye from Go!
 Bye from Julia!

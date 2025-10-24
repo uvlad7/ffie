@@ -20,6 +20,7 @@ Hello from <font color="#EEC643">Nim</font>!
 Hello from <font color="#8A52C9">Vala</font>!
 Hello from <font color="#8A52C9">Genie</font>!
 Hello from <font color="#005492">Odin</font>!
+Hello from <font color="#8A52C9">Vala</font>/<font color="#729ECE">GO</font><font color="#E30000">bje</font><font color="#7FE619">ct</font>!
 Hello from <font color="#AF0000">Ruby</font><font color="#5F8787">LLVM</font>!
 Hello from <font color="#AF0000">Ruby</font>!
 Hello from <font color="#F6CB00">Python</font>!
@@ -32,13 +33,14 @@ Bye from <font color="#776790">Crystal</font>!
 Bye from <font color="#00589B">C</font>!
 Bye from <font color="#B03932">D</font>!
 Bye from <font color="#F87432">Swift</font>!
-Bye from <font color="#8E4E8A">Haskell</font>!
 Bye from <font color="#2B617A">LLVM</font>!
 Bye from <font color="#EEC643">Nim</font>!
 Bye from <font color="#8A52C9">Vala</font>!
 Bye from <font color="#8A52C9">Genie</font>!
 Bye from <font color="#005492">Odin</font>!
+Bye from <font color="#8E4E8A">Haskell</font>!
 Bye from <font color="#AF0000">Ruby</font><font color="#5F8787">LLVM</font>!
+Bye from <font color="#8A52C9">Vala</font>/<font color="#729ECE">GO</font><font color="#E30000">bje</font><font color="#7FE619">ct</font>!
 Bye from <font color="#6499D1">C++</font>!
 Bye from <font color="#11ABB6">Go</font>!
 Bye from <font color="#9159A2">Julia</font>!
@@ -59,6 +61,7 @@ Hello from <font color="#EEC643">Nim</font>!
 Hello from <font color="#8A52C9">Vala</font>!
 Hello from <font color="#8A52C9">Genie</font>!
 Hello from <font color="#005492">Odin</font>!
+Hello from <font color="#8A52C9">Vala</font>/<font color="#729ECE">GO</font><font color="#E30000">bje</font><font color="#7FE619">ct</font>!
 Hello from <font color="#F6CB00">Python</font>!
 Bye from <font color="#F6CB00">Python</font>!
 Bye from <font color="#E33A25">Rust</font>!
@@ -72,6 +75,7 @@ Bye from <font color="#EEC643">Nim</font>!
 Bye from <font color="#8A52C9">Vala</font>!
 Bye from <font color="#8A52C9">Genie</font>!
 Bye from <font color="#005492">Odin</font>!
+Bye from <font color="#8A52C9">Vala</font>/<font color="#729ECE">GO</font><font color="#E30000">bje</font><font color="#7FE619">ct</font>!
 Bye from <font color="#6499D1">C++</font>!
 Bye from <font color="#11ABB6">Go</font>!
 Bye from <font color="#9159A2">Julia</font>!
